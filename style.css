@@ -4,7 +4,7 @@
   padding: 0;
   position: relative;
   box-sizing: border-box; /* Ensure consistent box sizing */
-  font-family: 'Segoe UI',  !important;
+  font-family: Helvetica, sans-serif !important;
 }
 
 body {

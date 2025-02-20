@@ -12,7 +12,7 @@ body {
   padding: 0;
 }
 
-/* Header section with background image */
+Header section with background image
 .header {
   background-image: url(./Assets/HS.png);
   height: 100vh;
@@ -27,6 +27,24 @@ body {
   position: relative; /* Keeps the navbar inside the header section */
 }
 
+/* The custom cursor */
+.cursor {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #3498db;
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: transform 0.1s ease, background-color 0.2s ease;
+}
+
+/* Example hover effect for any element */
+.content:hover .cursor {
+  background-color: #e74c3c;
+  transform: translate(-50%, -50%) scale(1.5);
+}
+
 
 
 /* Navbar fixed at the top of the header */
@@ -37,7 +55,9 @@ body {
   left: 0;
   width: 100%;
   z-index: 10; /* Ensure navbar is on top of the content */
-  background-color: transparent; /* Initially transparent */
+  background-color: rgba(249, 249, 237, 0.8) !important; /* #f9f9ed with 80% opacity */
+  backdrop-filter: blur(10px);
+
   color: white;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
@@ -50,7 +70,7 @@ body {
 
 /* Navbar links styling (default color white) */
 .navbar-links ul li a {
-  color: white;
+  color: rgb(40, 40, 40);
   text-decoration: none;
   font-size: 16px;
   transition: color 0.3s ease;
@@ -61,7 +81,7 @@ body {
   list-style-type: none;
   display: flex;
 
-  margin: 0px 0px 0px 160px !important;
+  margin: 0px 0px 0px 80px !important;
 
 }
 
@@ -77,7 +97,7 @@ body {
 @media (max-width: 1225px){
   .navbar-links ul {
 
-    margin: 0px 0px 0px 60px !important;
+    margin: 0px 0px 0px 0px !important;
   
   }
 
@@ -417,7 +437,7 @@ body {
 
 /* Navbar links styling (default color white) */
 .navbar-links ul li a {
-  color: white;
+  color: rgb(30, 30, 30);
   text-decoration: none;
   font-size: 16px;
   transition: color 0.3s ease;
@@ -566,3 +586,4 @@ body {
   }
 }
 
+/* navbar ends */

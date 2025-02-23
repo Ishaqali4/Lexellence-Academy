@@ -47,3 +47,5 @@ function moveCursor() {
 
 // Start the cursor movement
 moveCursor();
+
+

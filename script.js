@@ -1,20 +1,17 @@
 document.addEventListener("DOMContentLoaded", function () {
     const navbarToggle = document.querySelector(".navbar-toggle");
+    const navbarCollapse = document.querySelector("#collapsibleNavId");
 
     navbarToggle.addEventListener("click", function () {
-        const expanded = this.getAttribute("aria-expanded") === "true";
-        this.setAttribute("aria-expanded", !expanded);
+        // Toggle 'active' class for animation
+        this.classList.toggle("active");
+    });
+
+    // Reset toggle icon when menu closes
+    navbarCollapse.addEventListener("hidden.bs.collapse", function () {
+        navbarToggle.classList.remove("active");
     });
 });
-
-
-
-
-toggleButton.addEventListener("click", () => {
-  navbarLinks.classList.toggle("active");
-  toggleButton.classList.toggle("active"); // For animation
-});
-
 
 
 // Create the custom cursor element

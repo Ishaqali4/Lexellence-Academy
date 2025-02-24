@@ -73,20 +73,22 @@ p {
 }
 
 /* Toggle Button Animation */
-.navbar-toggle[aria-expanded="true"] .bar:nth-child(1) {
+.navbar-toggle.active .bar:nth-child(1) {
   transform: rotate(45deg) translateY(10px);
 }
-.navbar-toggle[aria-expanded="true"] .bar:nth-child(2) {
+
+.navbar-toggle.active .bar:nth-child(2) {
   opacity: 0;
 }
-.navbar-toggle[aria-expanded="true"] .bar:nth-child(3) {
+
+.navbar-toggle.active .bar:nth-child(3) {
   transform: rotate(-45deg) translateY(-10px);
 }
 
 /* Show Toggle Button Only Below 1024px */
 @media screen and (max-width: 1024px) {
   .navbar-toggle {
-      display: flex;
+    display: flex;
   }
 }
 
@@ -620,9 +622,6 @@ padding-right: 20px;
   padding: 20px;
 }
 
-.SubscribeContent2 {
-  padding: 20px;
-}
 
 /* Subscribe input & button */
 .subscribe-container {
@@ -650,28 +649,19 @@ padding-right: 20px;
 }
 
 @media screen and (max-width: 768px) {
-  .SubscribeContent1 {
-      text-align: center;
+ 
+  .SubscribeContent2{
+    display: block;
   }
+  
 
-  .subscribe-container {
-      flex-direction: column;
-      align-items: center;
-  }
-
-  .subscribe-input {
-      width: 90%;
-  }
-
-  .subscribe-button {
-      width: 90%;
-  }
 }
 
 
 
 .SubscribeContent2{
-  margin-top: 100px  !important;
+  display: block;
+  justify-content: start;
 }
 
 
@@ -726,10 +716,6 @@ padding-right: 20px;
 .Footer {
   background-color: #352513;
 color: white;
-}
-
-.Company  {
-  padding-left: 80px   !important;
 }
 
 

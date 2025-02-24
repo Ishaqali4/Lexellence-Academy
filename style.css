@@ -29,66 +29,60 @@ p {
 
 /* Navbar fixed at the top of the header */
 .navbar {
-  padding: 10px 60px !important;
   position: fixed !important;
-  top: 0;
-  left: 0;
+width: 100vw;
+z-index: 111;
+
+}
+
+.navbar-brand img {
+  height: 50px;
+  width: auto;
+}
+
+/* Hide Bootstrap's default toggler */
+.navbar-toggler {
+  display: none !important;
+}
+
+/* Custom Toggle Button */
+.navbar-toggle {
+  display: none; /* Hidden by default */
+  flex-direction: column;
+  justify-content: space-around;
+  width: 35px;
+  height: 28px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+/* Toggle button bars */
+.navbar-toggle .bar {
+  background-color: black;
+  height: 4px;
   width: 100%;
-  z-index: 10;
-  background-color: transparent; /* Initially transparent */
-  color: white;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
-  display: flex !important;
-  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
-  background-color: transparent;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
-
-  /* padding: 10px 50px !important; */
-  position: fixed !important; /* Keep the navbar fixed at the top */
-  top: 0;
-  left: 0;
-  width: 100% !important;
-  
-  z-index: 10; /* Ensure navbar is on top of the content */
-  background-color: rgba(249, 249, 237, 0.8) !important; /* #f9f9ed with 80% opacity */
-  backdrop-filter: blur(10px);
-
-  color: white;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 5px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-
-/* Navbar links styling (default color white) */
-.navbar-links ul li a {
-  color: rgb(40, 40, 40);
-  text-decoration: none;
-  font-size: 16px;
-  transition: color 0.3s ease;
+/* Toggle Button Animation */
+.navbar-toggle[aria-expanded="true"] .bar:nth-child(1) {
+  transform: rotate(45deg) translateY(10px);
+}
+.navbar-toggle[aria-expanded="true"] .bar:nth-child(2) {
+  opacity: 0;
+}
+.navbar-toggle[aria-expanded="true"] .bar:nth-child(3) {
+  transform: rotate(-45deg) translateY(-10px);
 }
 
-/* Navbar links list styling */
-.navbar-links ul {
-  list-style-type: none;
-  display: flex;
-
-  margin: 0px 0px 0px 80px !important;
-
-}
-
-
-/* Navbar items */
-.navbar-links ul li {
-  margin-left: 14px;
-}
-
-/* Navbar link styling */
-.navbar-links ul li a {
-  font-size: 16px;
-}
-
-/* Navbar hover effect */
-.navbar-links ul li a:hover {
-  color: #5D4526 !important;
+/* Show Toggle Button Only Below 1024px */
+@media screen and (max-width: 1024px) {
+  .navbar-toggle {
+      display: flex;
+  }
 }
 
 
@@ -98,29 +92,84 @@ p {
 
 
 
-.navbar a {
-  position: relative;
-}
 
- .navbar a::before {
-  content: '';
-  
-  position: absolute;
-  width: 100%;
-  height: 1px;
-  border-radius: 4px;
-  background-color: #b9e6ff;
-  bottom: 0;
-  left: 0;
-  transform-origin: right;
-  transform: scaleX(0);
-  transition: transform .3s ease-in-out;
-}
 
-.navbar a:hover::before {
-  transform-origin: left;
-  transform: scaleX(1);
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* General styling */
 .header-content {
@@ -218,119 +267,6 @@ p {
 
 
 
-/* Navbar color change on scroll */
-.navbar.scroll-active {
-  background-color: white; /* Set the background to white */
-  color: black; /* Set the text color to black */
-}
-
-/* Navbar links color change on scroll */
-.navbar.scroll-active .navbar-links ul li a {
-  color: rgb(130, 180, 150) !important;
-}
-
-
-/* When mouse leaves header section, navbar becomes white */
-.navbar.header-section-active {
-  background-color: white !important;
-  color: black !important;
-}
-
-.navbar.header-section-active .navbar-links ul li a {
-  color: rgb(77, 0, 0) !important;
-}
-
-/* Navbar Hover Effect: When hover on navbar background should be white and links to black */
-.navbar.header-section-active:hover {
-  background-color: white !important;
-  opacity: 1 !important; /* Ensure opacity remains full */
-}
-
-.navbar.header-section-active .navbar-links ul li a:hover {
-  color: black !important; /* On hover, change link color to black */
-}
-
-
-
-/* Navbar links styling (default color white) */
-.navbar-links ul li a {
-  color: white;
-  text-decoration: none;
-  font-size: 16px;
-  transition: color 0.3s ease;
-}
-
-/* When Navbar is sticky (on scroll), change background color */
-.navbar.scroll-active {
-  background-color: white !important;
-  color: black !important;
-}
-
-/* When the mouse enters the next section, change navbar style */
-/* .navbar.next-section-active {
-    background-color: white !important;
-    color: black !important;
-} */
-
-/* .navbar.next-section-active .navbar-links ul li a {
-    color: black !important;
-} */
-
-/* Navbar hover effect (keep color changes when navbar background is white) */
-.navbar.header-section-active .navbar-links ul li a:hover {
-  color: black !important; /* Change link color to black on hover */
-}
-
-
-/* Navbar fixed at the top of the header */
-
-
-/* Navbar links styling (default color white) */
-.navbar-links ul li a {
-  color: white;
-  text-decoration: none;
-  font-size: 16px;
-  transition: color 0.3s ease;
-}
-
-/* Navbar hover effect (links change to black) */
-.navbar-links ul li a:hover {
-  color: black;
-}
-
-
-/* Navbar hover effect - Background and link color */
-.navbar.header-section-active {
-  background-color: white !important;
-  color: black !important;
-}
-
-.navbar.header-section-active .navbar-links ul li a {
-  color: black !important; /* Change links to black */
-}
-
-.navbar.header-section-active:hover {
-  background-color: white !important; /* Navbar remains white */
-  opacity: 1 !important; /* Ensure opacity stays */
-}
-
-/* Ensure navbar remains visible with full opacity */
-.navbar.header-section-active .navbar-links ul li a:hover {
-  color: black !important; /* Links turn black on hover */
-}
-
-/* Navbar color change on scroll */
-.navbar.scroll-active {
-  background-color: white !important;
-  color: black !important;
-}
-
-
-
-.navbar.scroll-active .navbar-links ul li a {
-  color: rgb(227, 227, 227) !important;
-}
-
 .sign a {
   color: rgb(0, 0, 0);
   text-decoration: none;
@@ -341,108 +277,6 @@ p {
   border-radius: 10px;
 }
 
-/* Navbar links styling (default color white) */
-.navbar-links ul li a {
-  color: rgb(30, 30, 30);
-  text-decoration: none;
-  font-size: 16px;
-  transition: color 0.3s ease;
-}
-
-/* Styling for Sign In link */
-.navbar-links ul li.sign-in a {
-  color: #ffffff;
-  padding: 6px 20px;
-  background-color: #964B00;
-  border-radius: 8px;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-/* Hover effect for Sign In link */
-.navbar-links ul li.sign-in a:hover {
-  color: white;
-  background-color: #964B00;
-}
-
-/* Navbar Links Styling (for regular menu items) */
-.navbar-links {
-  display: flex;
-  justify-content: center; /* Pushes elements to left and right */
-}
-
-/* Container for main menu links (centered) */
-.navbar-main-links {
-  display: flex;
-  justify-content: center; /* Center align the main links */
-  flex-grow: 1; /* Ensures these links take available space */
-}
-
-.navbar-main-links li {
-  margin: 0 20px;
-  
-}
-
-/* Container for Sign In (aligned to the right) */
-.navbar-sign-in {
-  display: flex;
-  justify-content: flex-end; /* Push Sign In to the far right */
-  align-items: center;
-}
-
-
-/* Styling for Sign In link */
-.navbar-links ul li.sign-in a {
-  color: rgb(255, 255, 255);
-  padding: 6px 20px;
-  background-color: #964B00;
-  border-radius: 10px;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-@media screen and (max-width: 768px) {
-  .navbar-links {
-      display: none;
-      flex-direction: column;
-      background: #333;
-      width: 100%;
-      position: absolute;
-      top: 60px;
-      left: 0;
-      padding: 20px;
-      text-align: center;
-  }
-
-  .navbar {
-    width: 768px !important;
-  }
-
-  .navbar-links.active {
-      display: flex;
-  }
-
-  .navbar-links ul {
-      flex-direction: column;
-      gap: 15px;
-  }
-
-  .navbar-toggle {
-      display: flex;
-  }
-}
-
-@media screen and (max-width: 320px) {
-
-  .navbar {
-    width: 320px !important;
-  }
-
-}
-
-/* Hover effect for Sign In link */
-/* .navbar-links ul li.sign-in a:hover {
-    color: white;
-    background-color: #5c52e9;
-} */
 
 
 
@@ -516,11 +350,6 @@ p {
 
 
 
-/* Navbar logo styling */
-.logo img {
-  height: 50px;
-  width: auto;
-}
 
 /* Header section with background image */
 .header {
@@ -551,119 +380,6 @@ border-radius: 8px;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-/* toggle */
-
-
-
-
-
-
-
-/* Toggle button styling */
-.navbar-toggle {
-  display: none; /* Hidden by default */
-  flex-direction: column;
-  justify-content: space-around;
-  width: 30px;
-  height: 21px;
-  cursor: pointer;
-  z-index: 1001; /* Ensure it appears above other elements */
-}
-
-/* Bars inside the toggle button */
-.navbar-toggle .bar {
-  background-color: rgb(0, 0, 0);
-  height: 3px;
-  width: 100%;
-  border-radius: 5px;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
-/* Toggle button active state (rotate bars) */
-.navbar-toggle.active .bar:nth-child(1) {
-  transform: rotate(45deg) translateY(7px);
-}
-
-.navbar-toggle.active .bar:nth-child(2) {
-  opacity: 0;
-}
-
-.navbar-toggle.active .bar:nth-child(3) {
-  transform: rotate(-45deg) translateY(-7px);
-}
-
-/* Navbar Links */
-.navbar-links {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.navbar-links ul {
-  display: flex;
-}
-
-.navbar-links ul li {
-  margin: 0 10px;
-}
-
-.navbar-sign-in {
-  display: flex;
-  align-items: center;
-}
-
-@media (max-width: 1124px) {
-  /* Show the toggle button on screens smaller than 1024px */
-  .navbar-toggle {
-      display: flex;
-  }
-
-  /* Hide the navbar links by default */
-  .navbar-links {
-      display: none;
-      position: absolute;
-      top: 60px;
-      left: 0;
-      right: 0;
-      background-color: #c9cac2;
-      text-align: center;
-      width: 100%;
-      padding: 20px 0;
-      transition: transform 0.3s ease-in-out;
-  }
-
-  /* When active, show the navbar links */
-  .navbar-links.active {
-      display: block;
-  }
-
-  /* Navbar items in column on small screens */
-  .navbar-links ul {
-      flex-direction: column;
-  }
-
-  /* Navbar item spacing in column layout */
-  .navbar-links ul li {
-      margin: 10px 0;
-  }
-
-  /* Show the Sign In and Sign Up links at the bottom */
-  .navbar-sign-in {
-      margin-top: 20px;
-  }
-}
 
 
 
@@ -841,11 +557,70 @@ padding-right: 20px;
   display: none;
 }
 
-.SubscribeContent1  img{
-  width: 540px;
-  height: 360px;
 
+/* Ensure image scales properly */
+.SubscribeContent1 .image img {
+  width: 100%; /* Full width on smaller screens */
+  height: auto; /* Maintain aspect ratio */
+  max-width: 540px; /* Limit max size on larger screens */
+  display: block;
+  margin: 0 auto; /* Center align on small screens */
 }
+
+/* Layout adjustments */
+.SubscribeContent1 {
+  padding: 20px;
+}
+
+.SubscribeContent2 {
+  padding: 20px;
+}
+
+/* Subscribe input & button */
+.subscribe-container {
+  display: flex;
+  flex-wrap: wrap; /* Stack input & button on smaller screens */
+  gap: 10px;
+  justify-content: center;
+}
+
+.subscribe-input {
+  width: 70%;
+  max-width: 300px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.subscribe-button {
+  padding: 10px 15px;
+  border: none;
+  background-color: #964B00;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .SubscribeContent1 {
+      text-align: center;
+  }
+
+  .subscribe-container {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .subscribe-input {
+      width: 90%;
+  }
+
+  .subscribe-button {
+      width: 90%;
+  }
+}
+
+
 
 .SubscribeContent2{
   margin-top: 100px  !important;

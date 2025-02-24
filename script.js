@@ -1,12 +1,18 @@
-// JavaScript to handle mouse enter/leave behavior for the header section
-const navbarToggle = document.querySelector('.navbar-toggle'); // Hamburger button
-const navbarLinks = document.querySelector('.navbar-links');  // Navbar links container
+document.addEventListener("DOMContentLoaded", function () {
+    const navbarToggle = document.querySelector(".navbar-toggle");
+
+    navbarToggle.addEventListener("click", function () {
+        const expanded = this.getAttribute("aria-expanded") === "true";
+        this.setAttribute("aria-expanded", !expanded);
+    });
+});
 
 
-// Toggle the navbar menu visibility on small screens
-navbarToggle.addEventListener('click', () => {
-    navbarToggle.classList.toggle('active'); // Add 'active' class to toggle button for animation
-    navbarLinks.classList.toggle('active');  // Toggle the visibility of navbar links
+
+
+toggleButton.addEventListener("click", () => {
+  navbarLinks.classList.toggle("active");
+  toggleButton.classList.toggle("active"); // For animation
 });
 
 

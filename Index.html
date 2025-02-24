@@ -15,31 +15,40 @@
 
     <section class=" col-12 header">
         <!-- Navbar -->
-        <nav class="navbar">
-            <div class="logo">
-                <a href="#"><img src="./Assets/logo.png" alt="Logo"></a>
-            </div>
-            <div class="navbar-toggle">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-            </div>
-            <div class="navbar-links">
-                <ul class="navbar-main-links">
-                    <li><a href="">Home</a></li>
-                    <li><a href="">Programs</a></li>
-                    <li><a href="">Subjects</a></li>
-                    <li><a href="">Resources</a></li>
-                    <li><a href="">Legal Services</a></li>
-                    <li><a href="">About us</a></li>
-                </ul>
-                <!-- Sign in link -->
-                <ul class="navbar-sign-in">
-                    <li class="sign-up"><a href="">Sign up</a></li>
-                    <li class="sign-in"><a href="">Sign in</a></li>
-                </ul>
+
+   
+        
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <!-- Logo -->
+                <a class="navbar-brand" href="#">
+                    <img src="./Assets/logo.png" alt="Logo">
+                </a>
+        
+                <!-- Custom Toggle Button (Replaces Bootstrap Default) -->
+                <button class="navbar-toggle d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </button>
+        
+                <!-- Navbar Menu -->
+                <div class="collapse navbar-collapse" id="collapsibleNavId">
+                    <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Program</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Subjects</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Resources</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Legal Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+                    </ul>
+                </div>
             </div>
         </nav>
+        
+     
+
+
         
         <div class="header-content">
             <h1 class="header-title">"Empowering Legal Minds <br>for Tomorrow’s Challenges"</h1>
@@ -300,26 +309,24 @@
 
 <div class="  my-4 container subscribe">
 
-    <div class="SubscribeContent1 row">
-
-<div class="col-12 col-lg-6 image">
-
-</div>
-
-<div class="col-12 col-lg-6 SubscribeContent2">
-   <p>Lexcelence</p>
-   <h2>JOIN OUR ACADEMY</h2>
-   <p>"Unlock Your Legal Potential with Expert Training and Resources."</p>
-   
-   <div class="subscribe-container">
-    <input type="email" class="subscribe-input" placeholder="Enter your email">
-    <button class="subscribe-button">Subscribe</button>
-</div>
-
-</div>
-
-
+    <div class="SubscribeContent1 row align-items-center">
+        <div class="col-12 col-lg-6 image">
+            <img src="./Assets/image (1).png" alt="Subscribe Image" class="img-fluid">
+        </div>
+    
+        <div class="col-12 col-lg-6 SubscribeContent2 text-center text-lg-start">
+            <p>Lexcelence</p>
+            <h2>JOIN OUR ACADEMY</h2>
+            <p>"Unlock Your Legal Potential with Expert Training and Resources."</p>
+    
+            <div class="subscribe-container">
+                <input type="email" class="subscribe-input" placeholder="Enter your email">
+                <button class="subscribe-button">Subscribe</button>
+            </div>
+        </div>
     </div>
+    
+
 </div>
 
 

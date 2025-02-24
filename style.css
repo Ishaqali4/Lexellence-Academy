@@ -440,15 +440,14 @@ border-radius: 8px;
 
 
 
-.text2{
-display: flex;
-justify-content: space-between;
+
+
+
+
+.enroll {
+  display: flex;
+  justify-content: end;
 }
-
-
-
-
-
 
 .enroll  p {
   padding: 8px 20px;

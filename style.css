@@ -399,6 +399,45 @@ p {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+@media screen and (max-width: 768px) {
+  .navbar-links {
+      display: none;
+      flex-direction: column;
+      background: #333;
+      width: 100%;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      padding: 20px;
+      text-align: center;
+  }
+
+  .navbar {
+    width: 768px !important;
+  }
+
+  .navbar-links.active {
+      display: flex;
+  }
+
+  .navbar-links ul {
+      flex-direction: column;
+      gap: 15px;
+  }
+
+  .navbar-toggle {
+      display: flex;
+  }
+}
+
+@media screen and (max-width: 320px) {
+
+  .navbar {
+    width: 320px !important;
+  }
+
+}
+
 /* Hover effect for Sign In link */
 /* .navbar-links ul li.sign-in a:hover {
     color: white;

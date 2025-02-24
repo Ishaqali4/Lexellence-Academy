@@ -456,12 +456,60 @@ border-radius: 8px;
   background-color: #F5F5DC;
 }
 
+
+
 .Judiciary {
   width: 340px !important;
   height: auto;
   background-color: #ffffff;
   border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
 }
+
+.Judiciary:hover {
+  transform: translateY(-12px); /* Moves up */
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2); /* Shadow effect */
+}
+
+/* ReadMore Button Changes on Hover */
+.Judiciary:hover .ReadMore {
+  background-color: #964B00; /* Darker brown */
+  color: #F5F5FC !important; /* Light text */
+  padding: 12px 20px;
+  border-radius: 8px;
+}
+
+/* Link Styling */
+.ReadMore a {
+  color: #262626;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+/* Change text color inside ReadMore when hovering */
+.Judiciary:hover .ReadMore a {
+  color: white !important;
+}
+
+/* Default ReadMore Button */
+.ReadMore {
+  padding: 12px 20px;
+  border-radius: 8px;
+  color: #232323;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Smooth SVG Animation */
+.ReadMore svg {
+  transition: transform 0.3s ease-in-out; /* Smooth effect */
+}
+
+/* Move SVG smoothly when hovering over .Judiciary */
+.Judiciary:hover .ReadMore svg {
+  transform: translateX(8px); /* Moves icon slightly */
+}
+
+
 
 .ProgramSections img{
   width: 56px;
@@ -471,23 +519,9 @@ margin-bottom: 20px;
 
 .ProgramSections{
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
 }
 
-.ReadMore  a{
-  color: #ffffff;
-  text-decoration: none;
-
-}
-
-.ReadMore{
-  padding:12px 20px;
-  background-color: #964B00;
-  border-radius: 8px;
-  color: #F5F5DC;
-
-
-}
 
 /* subjects */
 

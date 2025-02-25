@@ -176,151 +176,6 @@ p {
 
 
 
-
-
-/* General styling */
-.header-content {
-  text-align: center;
-  padding: 50px 20px; /* Add some padding for better layout */
-}
-
-.header-title {
-  color: white;
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-}
-
-.header-subtitle {
-  color: white;
-  font-size: 1.2rem;
-  margin-bottom: 40px;
-}
-
-/* Explore button container */
-.explore {
-  display: flex;
-  margin-top:40px;
-  justify-content: center;
-  gap: 20px; /* Space between the buttons */
-}
-
-/* Link styles */
-.explore-link {
-  padding: 10px 20px;
-  border-radius: 4px;
-  text-decoration: none;
-  display: inline-block;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-/* Explore Program button */
-.explore-program {
-  color: aliceblue;
-  border: 1px solid #fff;
-}
-
-.explore-program:hover {
-  background-color: #fff;
-  color: #964B00;
-}
-
-/* Join Now button */
-.join-now {
-  color: #964B00;
-  background-color: #FFFDE5;
-}
-
-.join-now:hover {
-  background-color: #964B00;
-  color: white;
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-  .header-title {
-    font-size: 24px;
-  }
-  
-  .header-subtitle {
-    font-size: 16px;
-  }
-
-  .explore {
-    margin-top: 20px;
-    flex-direction: column; /* Stack the buttons vertically on smaller screens */
-    gap: 10px;
-  }
-
-  .explore-link {
-    width: 80%; /* Make buttons smaller on mobile */
-  }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.sign a {
-  color: rgb(0, 0, 0);
-  text-decoration: none;
-  font-size: 16px;
-  transition: color 0.3s ease;
-  padding: 6px 20px;
-  background-color: #ffffff;
-  border-radius: 10px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* Header section with background image */
 .header {
   background-image: url(./Assets/HS.png);
@@ -335,6 +190,160 @@ p {
   background-size: cover;
   position: relative; /* Keeps the navbar inside the header section */
 }
+
+
+
+
+
+/* General styling */
+.header-content {
+  text-align: center;
+  padding: 50px 20px; /* Add some padding for better layout */
+}  
+
+.header-title {
+  color: white;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}  
+
+.header-subtitle {
+  color: white;
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+}  
+
+/* Explore button container */
+.explore {
+  display: flex;
+  margin-top:40px;
+  justify-content: center;
+  gap: 20px; /* Space between the buttons */
+}  
+
+/* Link styles */
+.explore-link {
+  padding: 10px 20px;
+  border-radius: 4px;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}  
+
+/* Explore Program button */
+.explore-program {
+  color: aliceblue;
+  border: 1px solid #fff;
+}  
+
+.explore-program:hover {
+  background-color: #fff;
+  color: #964B00;
+}  
+
+/* Join Now button */
+.join-now {
+  color: #964B00;
+  background-color: #FFFDE5;
+}  
+
+.join-now:hover {
+  background-color: #964B00;
+  color: white;
+}  
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .header-title {
+    font-size: 24px;
+  }  
+  
+  .header-subtitle {
+    font-size: 16px;
+  }  
+
+  .explore {
+    margin-top: 20px;
+    flex-direction: column; /* Stack the buttons vertically on smaller screens */
+    gap: 10px;
+  }  
+
+  .explore-link {
+    width: 80%; /* Make buttons smaller on mobile */
+  }  
+}  
+
+
+
+
+/* Header section with background image */
+.header {
+  background-image: url(./Assets/HS.png);
+  height: 100vh;
+  width: 100%;
+  box-sizing: border-box;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+/* Header content styling */
+.header-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* The custom cursor */
 .cursor {
@@ -357,24 +366,6 @@ p {
 
 
 
-
-/* Header section with background image */
-.header {
-  background-image: url(./Assets/HS.png);
-  height: 100vh;
-  width: 100%;
-  box-sizing: border-box;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-}
-
-.sign-up {
-  padding: 3px 20px;
-  background-color: #ffffff;
-  color: #000;
-border-radius: 8px;
-}
 
 /* navbar ends */
 
@@ -409,14 +400,6 @@ border-radius: 8px;
 
 
 
-/* Header content styling */
-.header-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
 
 
 /* WhyChooseLexcelence */

@@ -668,7 +668,7 @@ padding-right: 20px;
             outline: none;
             background: transparent;
             padding: 10px;
-            width: 200px;
+            width: 280px;
             font-size: 16px;
             border-radius: 25px;
         }
@@ -686,6 +686,11 @@ padding-right: 20px;
         .subscribe-button:hover {
             background-color: #6d3e0e;
         }
+
+
+
+
+
 
 /* footer */
 

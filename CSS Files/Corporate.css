@@ -1,0 +1,486 @@
+/* Remove margin and padding for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    box-sizing: border-box !important; /* Ensure consistent box sizing */
+    /* font-family: Helvetica, sans-serif !important; */
+  }
+  
+  
+  
+  
+  
+  body {
+    margin: 0;
+    background-color: #FAF9F6;
+    padding: 0;
+  }
+  
+  /* Basic CSS Reset */
+  p {
+    margin: 0 !important;
+  }
+  
+  
+  
+  
+  
+  /* navbar */
+  
+  /* Navbar fixed at the top of the header */
+  .navbar {
+    position: fixed !important;
+    width: 100vw;
+    z-index: 111;
+    background-color: rgba(249, 249, 237, 0.9); /* Slight transparency for effect */
+    backdrop-filter: blur(10px); /* ✅ Adds blur effect */
+    -webkit-backdrop-filter: blur(10px); /* ✅ Safari support */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+  }
+  
+  
+  .navbar-brand img {
+    height: 50px;
+    width: auto;
+  }
+  
+  /* Hide Bootstrap's default toggler */
+  .navbar-toggler {
+    display: none !important;
+  }
+  
+  /* Custom Toggle Button */
+  .navbar-toggle {
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    justify-content: space-around;
+    width: 35px;
+    height: 28px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    z-index: 1001;
+  }
+  
+  /* Toggle button bars */
+  .navbar-toggle .bar {
+    background-color: black;
+    height: 4px;
+    width: 100%;
+    border-radius: 5px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  
+  /* Toggle Button Animation */
+  .navbar-toggle.active .bar:nth-child(1) {
+    transform: rotate(45deg) translateY(10px);
+  }
+  
+  .navbar-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .navbar-toggle.active .bar:nth-child(3) {
+    transform: rotate(-45deg) translateY(-10px);
+  }
+  
+  /* Show Toggle Button Only Below 1024px */
+  @media screen and (max-width: 1024px) {
+    .navbar-toggle {
+      display: flex;
+    }
+  }
+  
+  
+  
+  
+  
+  /* Header section with background image */
+  .header {
+    background-image: url(../Assets/Litigation.png) !important;
+    height: 100vh;
+    width: 100%;
+      background-size: cover; /* Ensures the image covers the element */
+      background-position: center; /* Centers the image */
+  
+  
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative; /* Keeps the navbar inside the header section */
+  }
+  
+  
+  
+  
+  
+  /* General styling */
+  .header-content {
+    text-align: center;
+    padding: 50px 20px; /* Add some padding for better layout */
+  }  
+  
+  .header-title {
+    color: white;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }  
+  
+  .header-subtitle {
+    color: white;
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+  }  
+
+  
+  
+  /* Explore button container */
+  .explore {
+    display: flex;
+    margin-top:40px;
+    justify-content: center;
+    gap: 20px; /* Space between the buttons */
+  }  
+  
+  /* Link styles */
+  .explore-link {
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }  
+  
+  /* Explore Program button */
+  .explore-program {
+    color: aliceblue;
+    border: 1px solid #fff;
+  }  
+  
+  .explore-program:hover {
+    background-color: #fff;
+    color: #964B00;
+  }  
+  
+  /* Join Now button */
+  .join-now {
+    color: #964B00;
+    background-color: #FFFDE5;
+  }  
+  
+  .join-now:hover {
+    background-color: #964B00;
+    color: white;
+  }  
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .header-title {
+      font-size: 24px;
+    }  
+    
+    .header-subtitle {
+      font-size: 16px;
+    }  
+  
+    .explore {
+      margin-top: 20px;
+      flex-direction: column; /* Stack the buttons vertically on smaller screens */
+      gap: 10px;
+    }  
+  
+    .explore-link {
+      width: 80%; /* Make buttons smaller on mobile */
+    }  
+  }  
+  
+  
+  
+  
+  /* Header section with background image */
+  .header {
+    background-image: url(./Assets/HS.png);
+    height: 100vh;
+    width: 100%;
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+  
+  /* Header content styling */
+  .header-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+/* navbar */
+
+
+
+
+
+/* Enroll */
+.Enroll {
+    background-color: #eaeaea;
+    margin: 0% !important;
+    padding: 0% !important;
+}
+
+
+
+.EnrollNow {
+    display: flex;
+    justify-content: flex-end; /* Aligns button to the right */
+    align-items: flex-end; /* Aligns button to the bottom */
+    height: 100%; /* Ensures the div takes full column height */
+}
+
+.EnrollNow a {
+    color: white;
+    background-color: #964B00;
+    padding: 8px 30px;
+    text-decoration: none;
+    border-radius: 12px;
+    display: inline-block;
+}
+
+/* Default Styling */
+.text1 {
+    padding: 10px 80px !important; /* Large screen padding */
+    text-align: left; /* Aligns text to left by default */
+}
+
+
+/* Styling for the heading */
+.learn-heading {
+    color: #964B00;
+    margin-top: 5px;
+}
+
+/* Responsive Fixes */
+@media (max-width: 1024px) {
+    .text1 {
+        padding: 10px 40px !important; /* Reduce padding on tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .text1 {
+        padding: 10px 30px !important; /* Further reduce padding on mobile */
+        text-align: left; /* Centers text on mobile for better appearance */
+    }  
+}
+
+.text2 {
+    display: flex;
+    padding: 10px 80px;
+    flex-wrap: wrap; /* Allows stacking on small screens */
+}
+
+/* Container Styling */
+.Enroll {
+    background-color: #eaeaea;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+
+/* Training Section */
+
+
+/* Enroll Now Button Styling */
+.EnrollNow {
+    display: flex;
+    align-items: center; /* Aligns button vertically */
+    justify-content: end; /* Center on small screens */
+}
+
+/* Enroll Now Button */
+.EnrollNow a {
+    color: white;
+    background-color: #964B00;
+    padding: 10px 30px;
+    text-decoration: none;
+    border-radius: 12px;
+    display: inline-block;
+}
+
+/* Responsive Fixes */
+@media (max-width: 768px) {
+    .text2 {
+        padding: 10px 20px; /* Smaller padding on small screens */
+    }
+
+    .EnrollNow {
+        justify-content: center; /* Center button on small screens */
+    }
+
+
+
+
+    .programimg img {
+        width: 228px !important;
+        
+    }
+    
+    .Program{
+        margin-bottom: 20px !important;
+    }
+
+
+    
+    .Programs {
+        padding: 10px 20px !important;
+        margin: 0%;
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.MasterCourtroom{
+    display: flex;
+    justify-content: center !important;
+gap: 32px;
+}
+
+
+
+.MasterProtocol{
+    border-radius: 20px;
+    width: 300px;
+    height: 250px;
+    background-color: #F5F5DC;
+    padding: 20px 0px 0px 20px !important;
+    margin: 0% !important;
+}
+
+.MasterProtocol img {
+    width: 159px;
+    height: auto;
+
+}
+
+.imgcont {
+    display: flex;
+    justify-content: end;
+    align-items: end !important;
+}
+
+
+.CourtroomSkills{
+    justify-content: center;
+    gap: 24px;
+    display: flex ;
+    margin: 0% !important;
+}
+
+.CourtroomSkillsContent{
+    margin-top: 10px;
+    padding: 20px;
+    width: 500px;
+    border-radius: 20px;
+    background-color: #FFFDE5;
+}
+
+
+
+.programimg img {
+    width: 328px;
+    
+}
+
+.programimg {
+    display: flex;
+    justify-content: center;
+}
+
+.Programs {
+    display: flex;
+    justify-content: space-around !important;
+}
+
+
+.Programs {
+    padding: 10px 90px;
+    margin: 0%;
+}
+
+
+
+
+
+.ProgramFeatures{
+    padding: 15px;
+    border-radius: 20px;
+    width: 260px;
+    background-color: #F5F5DC;
+}
+
+.ProgramFeatures img{
+   width: 32px; 
+   padding: 10px 0px;
+}
+
+.Features{
+    display: flex;
+justify-content: center;
+gap: 24px;
+margin: 0% !important;
+}
+
+/* footer */
+
+
+.FooterContent1 a{
+    color: #ffffff;
+    text-decoration: none;
+    
+  
+  }
+  
+  .Footer {
+      background-color: #352513;
+  color: white;
+  }
+  
+  
+  .FooterContent1 a {
+    position: relative;
+  }
+  
+   .FooterContent1 a::before {
+    content: '';
+    
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    border-radius: 4px;
+    background-color: #b9e6ff;
+    bottom: 0;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .3s ease-in-out;
+  }
+  
+  .FooterContent1 a:hover::before {
+    color: #ffff41 ;
+    transform-origin: left;
+    transform: scaleX(1);
+  }
+  

@@ -241,8 +241,8 @@ background-position: center;
     .AboutUs {
         display: block;
     }
-}
 
+    
 .content1 {
     margin-top: 80px;
     margin-left: 20px;
@@ -298,4 +298,12 @@ background-position: center;
     width: 100%;
     max-width: 400px;
     height: auto;
+}
+
+
+.navbar{
+    top: 0  !important;
+}
+
+
 }

@@ -514,7 +514,8 @@ margin-bottom: 20px;
 
 .ProgramSections{
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 20px;
 }
 
 
@@ -523,7 +524,7 @@ margin-bottom: 20px;
 .Subjects1 img {
 margin-left: 60px;
 margin-bottom: 20px;
-  height: 220px;
+  height: 220px !important;
   width: auto;
 }
 
@@ -531,10 +532,11 @@ margin-bottom: 20px;
   display: flex;
   margin: 0% !important;
   justify-content: center;
+  gap: 20px;
+  
 }
 
 .BNS{
-  margin: 2px 8px;
   background-color: #FAF9F6;
   width: 280px !important;
   height: 338px;
@@ -551,7 +553,6 @@ margin-bottom: 20px;
   align-items: center;
 
 }
-
 
 
 .Services{

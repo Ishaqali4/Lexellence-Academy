@@ -236,3 +236,117 @@
         margin-top: 8px;
     }
 }
+
+
+.founder {
+    display: flex;
+    justify-content: center;
+    gap: 200px;
+}
+
+
+
+
+
+.FounderContent{
+
+    
+    position: relative;
+    width: 300px;
+    height: 350px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.FounderContent img{
+
+    
+    position: relative;
+    width: 300px;
+    height: 350px ;
+    background-position: center;
+    background-size: cover;
+    border-radius: 15px;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+
+
+
+.FounderContent1 {
+    position: relative;
+    width: 300px;
+    height: 350px;
+    background-image: url("../Assets/Advisory.png"); /* Set the image as background */
+    background-position: center;
+    background-size: cover;
+    border-radius: 15px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.text-overlay {
+    position: absolute;
+    top: 68px; /* Adjust as needed */
+    left: -10  !important;
+    right: 15px;
+    font-size: 12px;
+    color: #5a422a; /* Adjust to match the image */
+    font-weight: 500;
+    text-align: left;
+    line-height: 1.7;
+}
+
+.text-overlay li {
+    list-style-type: disc;
+    margin-left: 10px;
+}
+
+/* Style for "Advisory Of Lexcelence" */
+.header-overlay {
+    position: absolute;
+    top: 20px;
+    left: 15px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #4c331c;
+}
+
+/* Style for the Name at the Bottom */
+.footer-overlay {
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 14px;
+    font-weight: bold;
+    color: #8a5a3a;
+    background-color: rgba(0, 0, 0, 0.12)  ;
+    width: 300px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 0px 0px 15px 30px;
+}
+/* Style for the Name at the Bottom */
+.footer-overlay2 {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-46%);
+    font-size: 14px;
+    font-weight: bold;
+    color: #552a0d;
+    background-color: rgba(0, 0, 0, 0.12)  ;
+    width: 300px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 0px 0px 14px 36px;
+}

@@ -2,9 +2,8 @@
 * {
     margin: 0;
     padding: 0;
-    position: relative;
+    position: relative !important;
     box-sizing: border-box !important; /* Ensure consistent box sizing */
-    /* font-family: Helvetica, sans-serif !important; */
   }
   
   
@@ -96,15 +95,8 @@
   
   /* Header section with background image */
   .header {
-    height: 100vh;
     width: 100%;
-      background-size: cover; /* Ensures the image covers the element */
-      background-position: right; /* Centers the image */
-  
-  
     box-sizing: border-box;
-    background-repeat: no-repeat;
-    background-size: cover;
     position: relative; /* Keeps the navbar inside the header section */
   }
   
@@ -113,50 +105,6 @@
   
   
   
-  .header-title {
-    color: #964B00;
-    font-size: 2.5rem;
-
-    font-family: 'Times New Roman', Times, serif;
-  }  
-  
-  .header-subtitle {
-    color: rgb(42, 42, 42);
-    font-size: 1rem;
-  }  
-
-  
-  
-  
-  .join-now:hover {
-    background-color: #964B00;
-    color: white;
-  }  
-  
-  /* Responsive Styles */
-  @media (max-width: 768px) {
-    .header-title {
-      font-size: 24px;
-    }  
-    
-    .header-subtitle {
-      font-size: 16px;
-    }  
-  
-  }  
-  
-  /* Header content styling */
-  .header-content {
-
-    text-align: left;
-  }
-  
-
-
-
-
-
-
 
 
 
@@ -182,128 +130,111 @@
     gap: 10px;
 }
 
-
-.AboutUs{
+.AboutUs {
     flex-wrap: wrap;
     display: flex;
-}
-
-
-.content1{
-    margin-top: 150px;
-width: 50%;
-margin-left: 80px;
-}
-
-
-.content2{
-    margin-top: 85px;
-    margin-left: 80px;
-    width: 424px;
-    height: 486px;
-    background: url(../Assets/AboutUS.png);
-background-size: cover;
-background-position: center;
-}
-
-
-@media screen and (max-width: 768px) {
-    .content1 {
-
-        margin-left: 30px;
-
-    }
-.content1 p {
-    font-size: 12px;
-}
-
-
-.content2{
-    margin-top: 115px;
-    margin-left: 80px;
-    width: 224px;
-    height: 286px;
-    background: url(../Assets/AboutUS.png);
-background-size: cover;
-background-position: center;
-}
-
-    .Connect {
-        width: 140px;
-        padding: 10px 20px;
-    }
-
-
-}
-
-
-@media screen and (max-width: 425px) {
-    .AboutUs {
-        display: block;
-    }
-
-    
-.content1 {
-    margin-top: 80px;
-    margin-left: 20px;
     width: 100%;
-    max-width: 300px;
-    text-align: center;
 }
 
-.content1 .header-title {
-    font-size: 2rem;
-}
-
-.content1 .header-subtitle {
-    font-size: 12px;
-}
-
-.Connect {
-    margin: 20px auto;
-    background-color: #964B00;
-    width: fit-content;
-    padding: 10px 40px;
-    border-radius: 32px;
+.content1 {
+    height: 450px !important;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-}
-
-.Connect a {
-    color: white;
-    text-decoration: none;
-    font-size: 1rem;
-}
-
-.Connect svg {
-    color: #FAF9F6;
-    margin-bottom: 2px;
+    margin-top: 200px;
+    width: 50%;
 }
 
 .content2 {
-    width: 100%;
-    max-width: 300px;
-    height: 220px;
-    margin-top: 50px;
-    background-image: url(../Assets/AboutUS.png);
-    background-position: center;
+    width: 50%;
+    width: 324px;
+    margin-top: 150px;
+    height: 386px;
+    background: url(../Assets/AboutUS.png);
     background-size: cover;
+    background-position: center;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .content1, .content2 {
+        width: 100%; /* Make both sections take full width on smaller screens */
+        margin-top: 50px; /* Adjust the top margin for smaller screens */
+    }
+
+    .content1 {
+        height: auto; /* Allow the height to adjust based on content */
+    }
+
+    .content2 {
+        height: 300px; /* Adjust the height for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .content1 {
+        margin-top: 30px; /* Further adjust the top margin for very small screens */
+    }
+
+    .content2 {
+        height: 200px; /* Further adjust the height for very small screens */
+    }
+}.AboutUs {
+    flex-wrap: wrap;
     display: flex;
-    justify-content: center;
-}
-
-.content2 img {
     width: 100%;
-    max-width: 400px;
-    height: auto;
 }
 
-
-.navbar{
-    top: 0  !important;
+.content1 {
+    height: 450px !important;
+    display: flex;
+    margin-top: 200px;
+    width: 50%;
 }
 
+.content2 {
+    width: 50%;
+    width: 324px;
+    margin-top: 150px;
+    height: 386px;
+    background: url(../Assets/AboutUS.png);
+    background-size: cover;
+    background-position: center;
+}
 
+/* Responsive styles */
+@media (max-width: 768px) {
+    .content1, .content2 {
+        width: 100%; /* Make both sections take full width on smaller screens */
+    }
+
+.AboutUs{
+    flex-direction: column-reverse;
+}
+
+    .content1 {
+        margin-top: 20px;
+        height: auto; /* Allow the height to adjust based on content */
+    }
+
+    .content2 {
+        margin-top: 100px;
+        height: 320px;
+        margin-left: 100px;
+        width: 300px; /* Adjust the height for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .content1 {
+        margin-top: 65px; /* Further adjust the top margin for very small screens */
+    }
+
+    .AboutUs{
+        flex-direction: column-reverse;
+    }
+
+    .content2 {
+        margin-top: 120px;
+        height: 300px;
+        width: 280px; /* Further adjust the height for very small screens */
+    }
 }

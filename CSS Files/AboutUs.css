@@ -350,3 +350,163 @@
     padding: 10px;
     border-radius: 0px 0px 14px 36px;
 }
+
+
+.MissionContent1  {
+
+    background-color: #FFFDE5;
+    padding: 15px;
+    border-radius: 12x;
+}
+.MissionContent2  {
+margin-top: 10px;
+    background-color: #FFFDE5;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 12x;
+}
+
+
+.missioncontainer{
+    display: block;
+    align-items: center !important;
+}
+
+.OurMission{
+    display: flex;
+    justify-content: center;
+}
+
+
+
+.MissionContent3  img{
+    width: 380px ;
+    border-radius: 12px;
+    height: 404px;
+}
+
+.MissionContent3 {
+
+    position: relative; /* Ensures the text overlay stays in place */
+}
+
+.MissionOverlay {
+    position: relative;
+    width: 100%;
+}
+
+
+.OverlayText {
+    position: absolute;
+    top: -360px !important;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    text-align: right;
+    color: white;
+    width: 90%;
+    border-radius: 12px;
+}
+
+
+.OverLayText2{
+    position: absolute;
+    top: -370px !important;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    text-align: right;
+    color: white;
+    font-size: 12px;
+    width: 90%;
+    border-radius: 12px;
+}
+.OverLayText3{
+    position: absolute;
+    top: -170px !important;
+    left:106%;
+    transform: translate(-50%, -50%);
+    text-align: right;
+    color: white;
+    font-size: 14px;
+    width: 90%;
+    border-radius: 12px;
+}
+
+
+.Connect1 svg {
+    color: #FAF9F6;
+    margin-bottom: 2px;
+}
+
+.Connect1   {
+    margin-top: 20px;
+    background-color: #964B00;
+    width: 169px;
+    padding: 10px 40px;
+    border-radius: 32px;
+    gap: 10px;
+}
+.Connect1 svg {
+    color: #FAF9F6;
+    margin-bottom: 2px;
+}
+
+
+.Connect1  a {
+text-decoration: none;
+color: white;
+}
+
+
+@media (max-width: 480px) {
+
+    .MissionContent3  img{
+        width: 300px ;
+        border-radius: 12px;
+        height: 404px;
+    }
+    
+
+
+
+    .OverlayText {
+        position: absolute;
+        top: -360px !important;
+        left: 60%;
+        transform: translate(-50%, -50%);
+        text-align: right;
+        color: white;
+        width: 90%;
+        border-radius: 12px;
+    }
+    
+    
+    .OverLayText2{
+        position: absolute;
+        top: -370px !important;
+        left: 60%;
+        transform: translate(-50%, -50%);
+        text-align: right;
+        color: white;
+        font-size: 12px;
+        width: 90%;
+        border-radius: 12px;
+    }
+    .OverLayText3{
+        position: absolute;
+        top: -170px !important;
+        left: 86%;
+        transform: translate(-50%, -50%);
+        text-align: right;
+        color: white;
+        font-size: 14px;
+        width: 90%;
+        border-radius: 12px;
+    }
+    
+
+
+
+
+
+
+}

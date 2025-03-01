@@ -386,7 +386,8 @@ margin-top: 10px;
 }
 
 .MissionContent3 {
-
+    width: 330px;
+    height: 444px;
     position: relative; /* Ensures the text overlay stays in place */
 }
 
@@ -459,6 +460,7 @@ color: white;
 
 @media (max-width: 480px) {
 
+
     .MissionContent3  img{
         width: 300px ;
         border-radius: 12px;
@@ -466,12 +468,10 @@ color: white;
     }
     
 
-
-
     .OverlayText {
         position: absolute;
         top: -360px !important;
-        left: 60%;
+        left: 50%;
         transform: translate(-50%, -50%);
         text-align: right;
         color: white;
@@ -483,7 +483,7 @@ color: white;
     .OverLayText2{
         position: absolute;
         top: -370px !important;
-        left: 60%;
+        left: 50%;
         transform: translate(-50%, -50%);
         text-align: right;
         color: white;
@@ -494,7 +494,7 @@ color: white;
     .OverLayText3{
         position: absolute;
         top: -170px !important;
-        left: 86%;
+        left:85%;
         transform: translate(-50%, -50%);
         text-align: right;
         color: white;
@@ -503,10 +503,6 @@ color: white;
         border-radius: 12px;
     }
     
-
-
-
-
 
 
 }

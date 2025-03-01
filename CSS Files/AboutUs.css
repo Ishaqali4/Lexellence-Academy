@@ -380,31 +380,31 @@ margin-top: 10px;
 
 
 .MissionContent3  img{
-    width: 380px ;
+    width: 320px ;
     border-radius: 12px;
     height: 404px;
+    padding: 0% !important;
 }
 
 .MissionContent3 {
     width: 330px;
+    padding: 0% !important;
     height: 444px;
     position: relative; /* Ensures the text overlay stays in place */
 }
 
 .MissionOverlay {
     position: relative;
-    width: 100%;
 }
 
 
 .OverlayText {
     position: absolute;
     top: -360px !important;
-    left: 70%;
+    left: 40%;
     transform: translate(-50%, -50%);
     text-align: right;
     color: white;
-    width: 90%;
     border-radius: 12px;
 }
 
@@ -412,23 +412,21 @@ margin-top: 10px;
 .OverLayText2{
     position: absolute;
     top: -370px !important;
-    left: 70%;
+    left: 40%;
     transform: translate(-50%, -50%);
     text-align: right;
     color: white;
     font-size: 12px;
-    width: 90%;
     border-radius: 12px;
 }
 .OverLayText3{
     position: absolute;
     top: -170px !important;
-    left:106%;
+    left:90%;
     transform: translate(-50%, -50%);
     text-align: right;
     color: white;
     font-size: 14px;
-    width: 90%;
     border-radius: 12px;
 }
 
@@ -455,54 +453,4 @@ margin-top: 10px;
 .Connect1  a {
 text-decoration: none;
 color: white;
-}
-
-
-@media (max-width: 480px) {
-
-
-    .MissionContent3  img{
-        width: 300px ;
-        border-radius: 12px;
-        height: 404px;
-    }
-    
-
-    .OverlayText {
-        position: absolute;
-        top: -360px !important;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: right;
-        color: white;
-        width: 90%;
-        border-radius: 12px;
-    }
-    
-    
-    .OverLayText2{
-        position: absolute;
-        top: -370px !important;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: right;
-        color: white;
-        font-size: 12px;
-        width: 90%;
-        border-radius: 12px;
-    }
-    .OverLayText3{
-        position: absolute;
-        top: -170px !important;
-        left:85%;
-        transform: translate(-50%, -50%);
-        text-align: right;
-        color: white;
-        font-size: 14px;
-        width: 90%;
-        border-radius: 12px;
-    }
-    
-
-
 }

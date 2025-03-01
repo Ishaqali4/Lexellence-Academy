@@ -93,19 +93,13 @@
   
   
   
-  /* Header section with background image */
-  .header {
-    width: 100%;
-    box-sizing: border-box;
-    position: relative; /* Keeps the navbar inside the header section */
-  }
+ 
   
-  
-  
-  
-  
-  
-
+.header-title {
+    font-family: 'Times New Roman', Times, serif;
+    color: #964B00;
+    font-weight: 600;
+}
 
 
 

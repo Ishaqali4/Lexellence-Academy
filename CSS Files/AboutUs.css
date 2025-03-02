@@ -483,3 +483,59 @@ color: white;
 
     
 }
+
+
+
+.content5 {
+    display: flex;
+}
+.Expert{
+    background-color: #FFFDBC;
+    padding: 20px;
+    border-radius: 12px;
+    rotate: -10deg;
+}
+
+.Practical{
+    background-color: #FDC0A3;
+    padding: 20px;
+    border-radius: 12px;
+
+}
+
+.content6{
+    display: flex;
+}
+
+
+
+
+
+.Comprehensive{
+    background-color: #EBB395;
+    padding: 20px;
+    border-radius: 12px;
+    rotate: -10deg;
+}
+
+.Flexible{
+    background-color: #FFFDE5;
+    padding: 20px;
+    border-radius: 12px;
+    rotate: 6deg;
+
+}
+
+.content7{
+    display: flex;
+    justify-content: end;
+}
+
+.career
+{
+    width: 300px;
+    background-color: #D1D1D1;
+    padding: 20px;
+    border-radius: 20px;
+    
+}

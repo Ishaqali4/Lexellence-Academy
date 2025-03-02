@@ -13,6 +13,24 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+    const whyChooseSection = document.querySelector(".whychose");
+
+    // Function to trigger the animation
+    function triggerAnimation() {
+        whyChooseSection.style.animation = "none"; // Reset animation
+        void whyChooseSection.offsetWidth; // Trigger reflow
+        whyChooseSection.style.animation = "scrollUp 1s ease forwards"; // Reapply animation
+    }
+
+    // Trigger animation on page load
+    triggerAnimation();
+
+    // Optional: Re-trigger animation on window resize (for mobile devices)
+    window.addEventListener("resize", function () {
+        triggerAnimation();
+    });
+});
 
 // Create the custom cursor element
 const cursor = document.createElement('div');

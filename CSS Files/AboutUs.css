@@ -359,7 +359,7 @@
     border-radius: 12x;
 }
 .MissionContent2  {
-margin-top: 10px;
+    margin-top: 10px;
     background-color: #FFFDE5;
     padding: 15px;
     margin-top: 20px;
@@ -375,6 +375,7 @@ margin-top: 10px;
 .OurMission{
     display: flex;
     justify-content: center;
+    gap: 60px;
 }
 
 
@@ -388,8 +389,14 @@ margin-top: 10px;
 
 .MissionContent3 {
     width: 330px;
+display: flex;
+border-radius: 12px;
+align-items: center !important;
     padding: 0% !important;
     height: 444px;
+    background-position: center !important;
+    background-size: cover !important;
+    background: url(../Assets/ShapingtheFuture.png);
     position: relative; /* Ensures the text overlay stays in place */
 }
 
@@ -398,31 +405,10 @@ margin-top: 10px;
 }
 
 
-.OverlayText {
-    position: absolute;
-    top: -360px !important;
-    left: 40%;
-    transform: translate(-50%, -50%);
-    text-align: right;
-    color: white;
-    border-radius: 12px;
-}
-
-
-.OverLayText2{
-    position: absolute;
-    top: -370px !important;
-    left: 40%;
-    transform: translate(-50%, -50%);
-    text-align: right;
-    color: white;
-    font-size: 12px;
-    border-radius: 12px;
-}
 .OverLayText3{
     position: absolute;
-    top: -170px !important;
-    left:90%;
+    top: 190px !important;
+    left:130%;
     transform: translate(-50%, -50%);
     text-align: right;
     color: white;
@@ -453,4 +439,47 @@ margin-top: 10px;
 .Connect1  a {
 text-decoration: none;
 color: white;
+}
+
+
+
+.img1 img{
+    width: 950px;
+    height: 200px;
+    
+}
+
+.img1 {
+    display: flex;
+    justify-content: center;
+}
+
+
+@media screen and (max-width: 1024px) {
+    
+   
+    .img1 img{
+        width: 700px;
+        height: auto;
+        
+    }
+
+
+
+
+    @media screen and (max-width: 426px) {
+       
+       
+        .img1 img{
+            width: 300px;
+            height: auto;
+            
+        }
+        
+    }
+
+
+
+
+    
 }

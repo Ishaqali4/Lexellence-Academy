@@ -484,6 +484,10 @@ color: white;
     
 }
 
+.ChooseContent{
+    display: block  !important;
+    align-items: center !important;
+}
 
 
 .content5 {
@@ -538,4 +542,12 @@ color: white;
     padding: 20px;
     border-radius: 20px;
     
+}
+
+.map-container {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically if the div has a height */
+    width: 100%; /* Ensures it takes full width */
+    padding: 20px; /* Optional padding */
 }

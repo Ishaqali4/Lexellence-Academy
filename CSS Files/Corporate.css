@@ -351,6 +351,41 @@
 
 
 
+/* .MasterProtocol{
+
+  position: absolute;
+  top: 150px !important;
+  left:50%;
+  transform: translate(-50%, -50%);
+
+}
+.MasterProtocol1{
+
+  position: absolute;
+  top: 150px !important;
+  left:50%;
+  transform: translate(-50%, -50%);
+rotate: 10deg;
+}
+.MasterProtocol2{
+
+  position: absolute;
+  top: 150px !important;
+  left:50%;
+  transform: translate(-50%, -50%);
+rotate: -10deg;
+} */
+
+
+
+
+
+
+
+
+
+
+
 
 .MasterCourtroom{
     display: flex;
@@ -369,7 +404,38 @@ gap: 32px;
     margin: 0% !important;
 }
 
+
 .MasterProtocol img {
+    width: 159px;
+    height: auto;
+
+}
+.MasterProtocol1{
+    border-radius: 20px;
+    width: 300px;
+    height: 250px;
+    background-color: #F5F5DC;
+    padding: 20px 0px 0px 20px !important;
+    margin: 0% !important;
+}
+
+
+.MasterProtocol1 img {
+    width: 159px;
+    height: auto;
+
+}
+.MasterProtocol2{
+    border-radius: 20px;
+    width: 300px;
+    height: 250px;
+    background-color: #F5F5DC;
+    padding: 20px 0px 0px 20px !important;
+    margin: 0% !important;
+}
+
+
+.MasterProtocol2 img {
     width: 159px;
     height: auto;
 

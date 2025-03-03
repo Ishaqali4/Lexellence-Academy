@@ -728,11 +728,50 @@ color: white;
 }
 
 .FooterContent1 a:hover::before {
-  color: #ffff41 ;
   transform-origin: left;
   transform: scaleX(1);
 }
 
+.Footer {
+  padding: 3rem !important; /* Default p-5 (3rem) */
+}
+
+@media (max-width: 768px) { /* Tablet screens */
+  .Footer {
+      padding: 0.25rem !important; /* p-1 */
+  }
+}
+
+.FooterContent1 p {
+  color: #e7e7e7;
+}
+
+
+.Company a{
+color: #dbdbdb;
+}
+.Company a:hover{
+color: #ffffff;
+}
+
+.Contact  a {
+  color: #e7e7e7;
+}
+
+.Location a {
+  color: #e7e7e7;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -759,20 +798,3 @@ color: white;
 
 
 
-
-.whychose {
-  opacity: 0; /* Initially hidden */
-  transform: translateY(100%); /* Start from the bottom */
-  animation: scrollUp 1s ease forwards; /* Apply the animation */
-}
-
-@keyframes scrollUp {
-  0% {
-      opacity: 0;
-      transform: translateY(100%); /* Start from the bottom */
-  }
-  100% {
-      opacity: 1;
-      transform: translateY(0); /* Move to the original position */
-  }
-}

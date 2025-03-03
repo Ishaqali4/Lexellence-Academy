@@ -484,3 +484,13 @@ margin: 0% !important;
     transform: scaleX(1);
   }
   
+
+  .Footer {
+    padding: 3rem !important; /* Default p-5 (3rem) */
+}
+
+@media (max-width: 768px) { /* Tablet screens */
+    .Footer {
+        padding: 0.25rem !important; /* p-1 */
+    }
+}

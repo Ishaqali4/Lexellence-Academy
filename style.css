@@ -738,30 +738,27 @@ color: white;
 
 @media (max-width: 768px) { /* Tablet screens */
   .Footer {
-      padding: 0.25rem !important; /* p-1 */
+
+      padding: 30px 20px !important; /* p-1 */
   }
 }
 
-.FooterContent1 p {
-  color: #e7e7e7;
-}
 
-
-.Company a{
-color: #dbdbdb;
-}
-.Company a:hover{
-color: #ffffff;
-}
-
-.Contact  a {
-  color: #e7e7e7;
-}
-
+.FooterContent1 p,
+.Company a,
+.Contact a,
 .Location a {
-  color: #e7e7e7;
+  color: #d8d8d8;
 }
 
+
+
+.FooterContent1 p:hover,
+.Company a:hover,
+.Contact a:hover,
+.Location a:hover {
+  color: #ffffff;
+}
 
 
 

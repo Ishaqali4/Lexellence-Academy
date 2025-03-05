@@ -512,53 +512,75 @@ gap: 24px;
 margin: 0% !important;
 }
 
+
+
+
+
+
 /* footer */
 
 
 .FooterContent1 a{
-    color: #ffffff;
-    text-decoration: none;
-    
+  color: #ffffff;
+  text-decoration: none;
+
+
+}
+
+.Footer {
+  background-color: #352513;
+color: white;
+}
+
+
+.FooterContent1 a {
+  position: relative;
+}
+
+ .FooterContent1 a::before {
+  content: '';
   
-  }
-  
-  .Footer {
-      background-color: #352513;
-  color: white;
-  }
-  
-  
-  .FooterContent1 a {
-    position: relative;
-  }
-  
-   .FooterContent1 a::before {
-    content: '';
-    
-    position: absolute;
-    width: 100%;
-    height: 1px;
-    border-radius: 4px;
-    background-color: #b9e6ff;
-    bottom: 0;
-    left: 0;
-    transform-origin: right;
-    transform: scaleX(0);
-    transition: transform .3s ease-in-out;
-  }
-  
-  .FooterContent1 a:hover::before {
-    color: #ffff41 ;
-    transform-origin: left;
-    transform: scaleX(1);
-  }
-  
-  .Footer {
-    padding: 3rem !important; /* Default p-5 (3rem) */
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  border-radius: 4px;
+  background-color: #b9e6ff;
+  bottom: 0;
+  left: 0;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform .3s ease-in-out;
+}
+
+.FooterContent1 a:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+.Footer {
+  padding: 3rem !important; /* Default p-5 (3rem) */
 }
 
 @media (max-width: 768px) { /* Tablet screens */
-    .Footer {
-        padding: 0.25rem !important; /* p-1 */
-    }
+  .Footer {
+
+      padding: 30px 20px !important; /* p-1 */
+  }
+}
+
+
+.FooterContent1 p,
+.Company a,
+.Contact a,
+.Location a {
+  color: #d8d8d8;
+}
+
+
+
+.FooterContent1 p:hover,
+.Company a:hover,
+.Contact a:hover,
+.Location a:hover {
+  color: #ffffff;
 }

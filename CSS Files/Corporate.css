@@ -350,11 +350,15 @@
 
 
 
+
+
+
+
 /* Base styles */
 .MasterProtocol, .MasterProtocol1, .MasterProtocol2 {
-  position: relative; /* Ensures smooth movement */
+  position: relative;
   transition: transform 1.5s ease-in-out, top 1.5s ease-in-out, left 1.5s ease-in-out, box-shadow 1.5s ease-in-out;
-  will-change: transform, top, left, box-shadow; /* Optimized animation */
+  will-change: transform, top, left, box-shadow;
 }
 
 /* Default stacked positions */
@@ -375,22 +379,27 @@
   transform: rotate(10deg);
 }
 
-/* 🛠 Hover Effect - Smooth Lift */
-.MasterCourtroom:hover .MasterProtocol,
-.MasterCourtroom:hover .MasterProtocol1,
-.MasterCourtroom:hover .MasterProtocol2 {
+/* When hovered - elements move to final position */
+.MasterCourtroom.active .MasterProtocol,
+.MasterCourtroom.active .MasterProtocol1,
+.MasterCourtroom.active .MasterProtocol2 {
   top: 0;
   left: 0;
   transform: translate(0, 0) rotate(0deg);
 }
 
-/* ✨ Individual Card Hover - Smooth Lifting */
-.MasterProtocol:hover,
-.MasterProtocol1:hover,
-.MasterProtocol2:hover {
+/* Individual card hover effect */
+.MasterProtocol.active,
+.MasterProtocol1.active,
+.MasterProtocol2.active {
   top: 20px;
   transform: translate(0, 0) rotate(0deg);
 }
+
+
+
+
+
 
 
 
@@ -425,30 +434,11 @@ padding: 20px 0px 0px 20px !important;
 margin: 0% !important;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 .MasterCourtroom{
     display: flex;
     justify-content: center !important;
 gap: 32px;
 }
-
-
-
-
-
-
 .MasterProtocol img {
     width: 159px;
     height: auto;
@@ -472,6 +462,26 @@ gap: 32px;
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .imgcont {
     display: flex;
     justify-content: end;
@@ -479,20 +489,119 @@ gap: 32px;
 }
 
 
-.CourtroomSkills{
-    justify-content: center;
-    gap: 24px;
-    display: flex ;
-    margin: 0% !important;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.CourtroomSkills {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  position: relative;
 }
 
-.CourtroomSkillsContent{
-    margin-top: 10px;
-    padding: 20px;
-    width: 500px;
-    border-radius: 20px;
-    background-color: #FFFDE5;
+/* Base styles for skill items */
+.CourtroomSkillsContent1,
+.CourtroomSkillsContent2,
+.CourtroomSkillsContent3,
+.CourtroomSkillsContent4 {
+  position: relative;
+  margin-top: 10px;
+  padding: 20px;
+  width: 500px;
+  border-radius: 20px;
+  background-color: #FFFDE5;
+  transition: transform 1.5s ease-in-out, top 1.5s ease-in-out, left 1.5s ease-in-out;
+  will-change: transform, top, left;
 }
+
+/* Default stacked positions */
+.CourtroomSkillsContent1 { left: 22%; top: 70px; transform: rotate(0deg); }
+.CourtroomSkillsContent2 { left: -22%; top: 70px; transform: rotate(5deg); }
+.CourtroomSkillsContent3 { left: 21%; top: -120px; transform: rotate(8deg); }
+.CourtroomSkillsContent4 { left: -22%; top: -120px; transform: rotate(-4deg); }
+
+/* 🛠 Animation Effect when `active` class is added */
+.CourtroomSkills.active .CourtroomSkillsContent1,
+.CourtroomSkills.active .CourtroomSkillsContent2,
+.CourtroomSkills.active .CourtroomSkillsContent3,
+.CourtroomSkills.active .CourtroomSkillsContent4 {
+  top: 0;
+  left: 0;
+  transform: translate(0, 0) rotate(0deg);
+}
+.CourtroomSkills {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+/* Base styles for skill items */
+.CourtroomSkillsContent1,
+.CourtroomSkillsContent2,
+.CourtroomSkillsContent3,
+.CourtroomSkillsContent4 {
+  position: relative;
+  margin-top: 10px;
+  padding: 20px;
+  width: 500px;
+  border-radius: 20px;
+  background-color: #FFFDE5;
+  transition: transform 1.5s ease-in-out, top 1.5s ease-in-out, left 1.5s ease-in-out;
+  will-change: transform, top, left;
+}
+
+/* Default stacked positions */
+.CourtroomSkillsContent1 { left: 22%; top: 70px; transform: rotate(0deg); }
+.CourtroomSkillsContent2 { left: -22%; top: 70px; transform: rotate(5deg); }
+.CourtroomSkillsContent3 { left: 21%; top: -120px; transform: rotate(8deg); }
+.CourtroomSkillsContent4 { left: -22%; top: -120px; transform: rotate(-4deg); }
+
+/* 🛠 Animation Effect when `active` class is added */
+.CourtroomSkills.active .CourtroomSkillsContent1,
+.CourtroomSkills.active .CourtroomSkillsContent2,
+.CourtroomSkills.active .CourtroomSkillsContent3,
+.CourtroomSkills.active .CourtroomSkillsContent4 {
+  top: 0;
+  left: 0;
+  transform: translate(0, 0) rotate(0deg);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

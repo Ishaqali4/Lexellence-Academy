@@ -370,6 +370,12 @@
       display: block;
       align-content: center;
     
+      transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+    }
+
+    .BNS:hover {
+      transform: translateY(-6px); /* Moves the div up by 6px */
+      box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2); /* Blur shadow effect */
     }
     
     .BNS img {

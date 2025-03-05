@@ -350,31 +350,82 @@
 
 
 
-
-/* .MasterProtocol{
-
-  position: absolute;
-  top: 150px !important;
-  left:50%;
-  transform: translate(-50%, -50%);
-
+/* Base styles */
+.MasterProtocol, .MasterProtocol1, .MasterProtocol2 {
+  position: relative; /* Ensures smooth movement */
+  transition: transform 1.5s ease-in-out, top 1.5s ease-in-out, left 1.5s ease-in-out, box-shadow 1.5s ease-in-out;
+  will-change: transform, top, left, box-shadow; /* Optimized animation */
 }
+
+/* Default stacked positions */
+.MasterProtocol {
+  z-index: 3;
+  left: 22%;
+  transform: rotate(-10deg);
+}
+
+.MasterProtocol1 {
+  z-index: 2;
+  transform: rotate(0deg);
+}
+
+.MasterProtocol2 {
+  z-index: 1;
+  left: -24%;
+  transform: rotate(10deg);
+}
+
+/* 🛠 Hover Effect - Smooth Lift */
+.MasterCourtroom:hover .MasterProtocol,
+.MasterCourtroom:hover .MasterProtocol1,
+.MasterCourtroom:hover .MasterProtocol2 {
+  top: 0;
+  left: 0;
+  transform: translate(0, 0) rotate(0deg);
+}
+
+/* ✨ Individual Card Hover - Smooth Lifting */
+.MasterProtocol:hover,
+.MasterProtocol1:hover,
+.MasterProtocol2:hover {
+  top: 20px;
+  transform: translate(0, 0) rotate(0deg);
+}
+
+
+
+
+
+
+
+.MasterProtocol{
+  border-radius: 20px;
+  width: 300px;
+  height: 250px;
+  background-color: #F5F5DC;
+  padding: 20px 0px 0px 20px !important;
+  margin: 0% !important;
+}
+
 .MasterProtocol1{
-
-  position: absolute;
-  top: 150px !important;
-  left:50%;
-  transform: translate(-50%, -50%);
-rotate: 10deg;
+border-radius: 20px;
+width: 300px;
+height: 250px;
+background-color: #F5F5DC;
+padding: 20px 0px 0px 20px !important;
+margin: 0% !important;
 }
-.MasterProtocol2{
 
-  position: absolute;
-  top: 150px !important;
-  left:50%;
-  transform: translate(-50%, -50%);
-rotate: -10deg;
-} */
+.MasterProtocol2{
+border-radius: 20px;
+width: 300px;
+height: 250px;
+background-color: #F5F5DC;
+padding: 20px 0px 0px 20px !important;
+margin: 0% !important;
+}
+
+
 
 
 
@@ -395,14 +446,7 @@ gap: 32px;
 
 
 
-.MasterProtocol{
-    border-radius: 20px;
-    width: 300px;
-    height: 250px;
-    background-color: #F5F5DC;
-    padding: 20px 0px 0px 20px !important;
-    margin: 0% !important;
-}
+
 
 
 .MasterProtocol img {
@@ -410,28 +454,12 @@ gap: 32px;
     height: auto;
 
 }
-.MasterProtocol1{
-    border-radius: 20px;
-    width: 300px;
-    height: 250px;
-    background-color: #F5F5DC;
-    padding: 20px 0px 0px 20px !important;
-    margin: 0% !important;
-}
 
 
 .MasterProtocol1 img {
     width: 159px;
     height: auto;
 
-}
-.MasterProtocol2{
-    border-radius: 20px;
-    width: 300px;
-    height: 250px;
-    background-color: #F5F5DC;
-    padding: 20px 0px 0px 20px !important;
-    margin: 0% !important;
 }
 
 

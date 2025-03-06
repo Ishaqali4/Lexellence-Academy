@@ -197,17 +197,7 @@
   
   
   
-  /* Header section with background image */
-  .header {
-    background-image: url(./Assets/HS.png);
-    height: 100vh;
-    width: 100%;
-    box-sizing: border-box;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-  }
-  
+
   /* Header content styling */
   .header-content {
     position: absolute;
@@ -528,6 +518,7 @@ gap: 32px;
   gap: 24px;
   flex-wrap: wrap;
   position: relative;
+  overflow-x: hidden;
 }
 
 /* Base styles for skill items */
@@ -685,6 +676,7 @@ gap: 32px;
     display: flex;
 justify-content: center;
 gap: 24px;
+overflow-x: hidden;
 margin: 0% !important;
 }
 

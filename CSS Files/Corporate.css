@@ -198,17 +198,7 @@
   
   
   
-  /* Header section with background image */
-  .header {
-    background-image: url(./Assets/HS.png);
-    height: 100vh;
-    width: 100%;
-    box-sizing: border-box;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-  }
-  
+
   /* Header content styling */
   .header-content {
     position: absolute;
@@ -405,11 +395,6 @@
   margin: 0 !important;
 }
 
-.MasterCourtroom{
-    display: flex;
-    justify-content: center !important;
-gap: 32px;
-}
 
 
 
@@ -419,6 +404,18 @@ gap: 32px;
     width: 159px;
     height: auto;
 }
+
+.MasterCourtroom{
+    display: flex;
+    justify-content: center !important;
+gap: 32px;
+overflow-x: hidden;
+
+}
+
+
+
+
 
 
 .imgcont {
@@ -455,6 +452,8 @@ gap: 32px;
   gap: 24px;
   flex-wrap: wrap;
   position: relative;
+  overflow-x: hidden;
+
 }
 
 /* Base styles for skill items */
@@ -613,6 +612,8 @@ gap: 32px;
     display: flex;
 justify-content: center;
 gap: 24px;
+overflow-x: hidden;
+
 margin: 0% !important;
 }
 

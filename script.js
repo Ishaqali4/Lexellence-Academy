@@ -70,3 +70,24 @@ function moveCursor() {
 moveCursor();
 
 
+
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const programSections = document.querySelector(".ProgramSections");
+
+    // Intersection Observer to detect visibility
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    programSections.classList.add("active"); // Add animation when visible
+                }
+            });
+        },
+        { threshold: 0.4 } // Trigger when 30% of the section is visible
+    );
+
+    observer.observe(programSections);
+});

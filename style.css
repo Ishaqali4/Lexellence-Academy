@@ -33,9 +33,9 @@ p {
   position: fixed !important;
   width: 100vw;
   z-index: 111;
-  background-color: rgba(249, 249, 237, 0.9); /* Slight transparency for effect */
+  background-color: rgba(255, 255, 237, 0.681); /* Slight transparency for effect */
   backdrop-filter: blur(10px); /* ✅ Adds blur effect */
-  -webkit-backdrop-filter: blur(10px); /* ✅ Safari support */
+  -webkit-backdrop-filter: blur(6px); /* ✅ Safari support */
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
 }
 
@@ -96,86 +96,6 @@ p {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* Header section with background image */
 .header {
   background-image: url(./Assets/HS.png);
@@ -183,6 +103,7 @@ p {
   width: 100%;
     background-size: cover; /* Ensures the image covers the element */
     background-position: center; /* Centers the image */
+    background-attachment: fixed; /* Enables parallax effect */
 
 
   box-sizing: border-box;
@@ -276,16 +197,7 @@ p {
 
 
 
-/* Header section with background image */
-.header {
-  background-image: url(./Assets/HS.png);
-  height: 100vh;
-  width: 100%;
-  box-sizing: border-box;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-}
+
 
 /* Header content styling */
 .header-content {

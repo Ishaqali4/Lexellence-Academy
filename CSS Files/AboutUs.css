@@ -505,28 +505,117 @@ color: white;
 
 .content5 {
     display: flex;
+    
 }
-.Expert{
+.content6{
+    display: flex;
+}
+.content7{
+    display: flex;
+    justify-content: end;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Default Positions with Smooth Animation */
+.Expert, .Comprehensive, .Flexible, .Practical, .career {
+    position: relative;
+    transition: transform 1s cubic-bezier(0.25, 1, 0.5, 1), 
+                top 1s cubic-bezier(0.25, 1, 0.5, 1), 
+                left 1s cubic-bezier(0.25, 1, 0.5, 1), 
+                rotate 1s ease-in-out;
+}
+
+/* Default Positions */
+.Expert {
+    background-color: #FFFDBC;
+    padding: 20px;
+    border-radius: 12px;
+    top: 160px;
+    left: 180px;
+}
+
+.Comprehensive {
+    background-color: #EBB395;
+    padding: 20px;
+    border-radius: 12px;
+    top: 10px;
+    left: 180px;
+}
+
+.Flexible {
+    background-color: #FFFDE5;
+    padding: 20px;
+    border-radius: 12px;
+    top: 10px;
+    left: -120px;
+}
+
+.Practical {
+    background-color: #FDC0A3;
+    padding: 20px;
+    border-radius: 12px;
+    top: 190px;
+    left: -120px;
+}
+
+.career {
+    width: 300px;
+    background-color: #D1D1D1;
+    padding: 20px;
+    border-radius: 20px;
+    top: -160px;
+    left: -120px;
+}
+
+/* 🚀 Smoother Animation Effect when Active */
+.WhyChoose.active .Practical,
+.WhyChoose.active .career {
+    top: 0;
+    left: 0;
+    transform: translate(0, 0) rotate(0deg);
+}
+
+.WhyChoose.active .Expert{
+    top: 0;
+    left: 0;
+    rotate: -10deg;
+
+}
+.WhyChoose.active .Comprehensive{
+    top: 0;
+    left: 0;
+    rotate: -10deg;
+}
+
+.WhyChoose.active .Flexible{
+    top: 0;
+    left: 0;
+    rotate: 6deg;
+}
+
+
+
+
+
+
+
+
+/* .Expert{
     background-color: #FFFDBC;
     padding: 20px;
     border-radius: 12px;
     rotate: -10deg;
 }
-
-.Practical{
-    background-color: #FDC0A3;
-    padding: 20px;
-    border-radius: 12px;
-
-}
-
-.content6{
-    display: flex;
-}
-
-
-
-
 
 .Comprehensive{
     background-color: #EBB395;
@@ -542,20 +631,28 @@ color: white;
     rotate: 6deg;
 
 }
+.Practical{
+    background-color: #FDC0A3;
+    padding: 20px;
+    border-radius: 12px;
 
-.content7{
-    display: flex;
-    justify-content: end;
 }
-
-.career
-{
+.career{
     width: 300px;
     background-color: #D1D1D1;
     padding: 20px;
     border-radius: 20px;
     
-}
+} */
+
+
+
+
+
+
+
+
+
 
 .map-container {
     display: flex;

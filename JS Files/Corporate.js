@@ -40,3 +40,23 @@ document.addEventListener("DOMContentLoaded", function () {
 
     observer.observe(courtroomSkills);
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const featuresSection = document.querySelector(".Features");
+
+    // Intersection Observer to trigger animation when section enters viewport
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    featuresSection.classList.add("active"); // Activate animation
+                } else {
+                    featuresSection.classList.remove("active"); // Remove animation if not in view
+                }
+            });
+        },
+        { threshold: 0.2 } // Animation triggers when 20% of the section is visible
+    );
+
+    observer.observe(featuresSection);
+});

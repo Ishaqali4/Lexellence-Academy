@@ -365,7 +365,10 @@
       background-color: #ffffff;
       width: 310px !important;
       height: 338px;
-    
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+
       border-radius: 12px;
       display: block;
       align-content: center;
@@ -385,6 +388,14 @@
     
     }
 
+    
+    
+    /* When visible, apply fade-in effect */
+    .BNS.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
 
 
 
@@ -415,6 +426,55 @@
 
 
 
+/* Base styles */
+.MasterProtocol, .MasterProtocol1, .MasterProtocol2 {
+  position: relative;
+  transition: transform 1.5s ease-in-out, top 1.5s ease-in-out, left 1.5s ease-in-out, box-shadow 1.5s ease-in-out;
+  will-change: transform, top, left, box-shadow;
+}
+
+/* Default stacked positions */
+.MasterProtocol {
+  z-index: 3;
+  left: 22%;
+  transform: rotate(-10deg);
+}
+
+.MasterProtocol1 {
+  z-index: 2;
+  transform: rotate(0deg);
+}
+
+.MasterProtocol2 {
+  z-index: 1;
+  left: -24%;
+  transform: rotate(10deg);
+}
+
+/* When hovered - elements move to final position */
+.MasterCourtroom.active .MasterProtocol,
+.MasterCourtroom.active .MasterProtocol1,
+.MasterCourtroom.active .MasterProtocol2 {
+  top: 0;
+  left: 0;
+  transform: translate(0, 0) rotate(0deg);
+}
+
+/* Individual card hover effect */
+.MasterProtocol.active,
+.MasterProtocol1.active,
+.MasterProtocol2.active {
+  top: 20px;
+  transform: translate(0, 0) rotate(0deg);
+}
+.MasterProtocol, .MasterProtocol1, .MasterProtocol2 {
+  border-radius: 20px;
+  width: 300px;
+  height: 270px;
+  background-color: #F5F5DC;
+  padding: 20px 0px 0px 20px !important;
+  margin: 0 !important;
+}
 
 .MasterCourtroom{
     display: flex;
@@ -424,20 +484,30 @@ gap: 32px;
 
 
 
-.MasterProtocol{
-    border-radius: 20px;
-    width: 300px;
-    height: 250px;
-    background-color: #F5F5DC;
-    padding: 20px 0px 0px 20px !important;
-    margin: 0% !important;
+.MasterProtocol img,
+.MasterProtocol1 img,
+.MasterProtocol2 img {
+    width: 149px;
+    height: 178px;
 }
 
-.MasterProtocol img {
-    width: 159px;
-    height: auto;
 
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .imgcont {
     display: flex;
@@ -446,20 +516,101 @@ gap: 32px;
 }
 
 
-.CourtroomSkills{
-    justify-content: center;
-    gap: 24px;
-    display: flex ;
-    margin: 0% !important;
+
+
+
+
+
+
+
+.CourtroomSkills {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  position: relative;
 }
 
-.CourtroomSkillsContent{
-    margin-top: 10px;
-    padding: 20px;
-    width: 500px;
-    border-radius: 20px;
-    background-color: #FFFDE5;
+/* Base styles for skill items */
+.CourtroomSkillsContent1,
+.CourtroomSkillsContent2,
+.CourtroomSkillsContent3,
+.CourtroomSkillsContent4 {
+  position: relative;
+  margin-top: 10px;
+  padding: 20px;
+  width: 500px;
+  border-radius: 20px;
+  background-color: #FFFDE5;
+  transition: transform 1.5s ease-in-out, top 1.5s ease-in-out, left 1.5s ease-in-out;
+  will-change: transform, top, left;
 }
+
+/* Default stacked positions */
+.CourtroomSkillsContent1 { left: 22%; top: 70px; transform: rotate(0deg); }
+.CourtroomSkillsContent2 { left: -22%; top: 70px; transform: rotate(5deg); }
+.CourtroomSkillsContent3 { left: 21%; top: -120px; transform: rotate(8deg); }
+.CourtroomSkillsContent4 { left: -22%; top: -120px; transform: rotate(-4deg); }
+
+/* 🛠 Animation Effect when `active` class is added */
+.CourtroomSkills.active .CourtroomSkillsContent1,
+.CourtroomSkills.active .CourtroomSkillsContent2,
+.CourtroomSkills.active .CourtroomSkillsContent3,
+.CourtroomSkills.active .CourtroomSkillsContent4 {
+  top: 0;
+  left: 0;
+  transform: translate(0, 0) rotate(0deg);
+}
+.CourtroomSkills {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+/* Base styles for skill items */
+.CourtroomSkillsContent1,
+.CourtroomSkillsContent2,
+.CourtroomSkillsContent3,
+.CourtroomSkillsContent4 {
+  position: relative;
+  margin-top: 10px;
+  padding: 20px;
+  width: 500px;
+  border-radius: 20px;
+  background-color: #FFFDE5;
+  transition: transform 1.5s ease-in-out, top 1.5s ease-in-out, left 1.5s ease-in-out;
+  will-change: transform, top, left;
+}
+
+/* Default stacked positions */
+.CourtroomSkillsContent1 { left: 22%; top: 70px; transform: rotate(0deg); }
+.CourtroomSkillsContent2 { left: -22%; top: 70px; transform: rotate(5deg); }
+.CourtroomSkillsContent3 { left: 21%; top: -120px; transform: rotate(8deg); }
+.CourtroomSkillsContent4 { left: -22%; top: -120px; transform: rotate(-4deg); }
+
+/* 🛠 Animation Effect when `active` class is added */
+.CourtroomSkills.active .CourtroomSkillsContent1,
+.CourtroomSkills.active .CourtroomSkillsContent2,
+.CourtroomSkills.active .CourtroomSkillsContent3,
+.CourtroomSkills.active .CourtroomSkillsContent4 {
+  top: 0;
+  left: 0;
+  transform: translate(0, 0) rotate(0deg);
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -483,22 +634,53 @@ gap: 32px;
     padding: 10px 90px;
     margin: 0%;
 }
-
-
-
-
-
-.ProgramFeatures{
+/* Common Styles for All Program Feature Cards */
+.ProgramFeatures1,
+.ProgramFeatures2,
+.ProgramFeatures3,
+.ProgramFeatures4 {
     padding: 15px;
     border-radius: 20px;
     width: 260px;
     background-color: #F5F5DC;
+    position: relative; /* Ensures positioning works as expected */
+    top: 0px;
 }
 
-.ProgramFeatures img{
-   width: 32px; 
-   padding: 10px 0px;
+/* Individual Positioning & Rotation */
+.ProgramFeatures1 { left: 42%; transform: rotate(0deg); }
+.ProgramFeatures2 { left: 18%; transform: rotate(4deg); }
+.ProgramFeatures3 { left: -5%; transform: rotate(-4deg); }
+.ProgramFeatures4 { left: -28%; transform: rotate(8deg); }
+
+
+/* When the section is active, animate elements */
+.Features.active .ProgramFeatures1,
+.Features.active .ProgramFeatures2,
+.Features.active .ProgramFeatures3,
+.Features.active .ProgramFeatures4 {
+    top: 0;
+    left: 0;
+    transform: translate(0, 0) rotate(0deg);
+    transition: transform 1s ease-in-out, left 1s ease-in-out;
 }
+/* Common styles for images inside Program Features */
+.ProgramFeatures1 img,
+.ProgramFeatures2 img,
+.ProgramFeatures3 img,
+.ProgramFeatures4 img {
+    width: 32px;
+    padding: 10px 0px;
+}
+
+
+
+
+
+
+
+
+
 
 .Features{
     display: flex;
@@ -506,6 +688,20 @@ justify-content: center;
 gap: 24px;
 margin: 0% !important;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -3,8 +3,6 @@
     margin: 0;
     padding: 0;
     position: relative !important;
-    font-family: 'Source Sans 3', sans-serif;
-
     box-sizing: border-box !important; /* Ensure consistent box sizing */
   }
   
@@ -24,7 +22,7 @@
   }
   
   
-
+  
   @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
 
   /* navbar */
@@ -459,6 +457,7 @@ color: white;
 .img1 {
     display: flex;
     justify-content: center;
+    overflow-x: hidden;
 }
 
 
@@ -481,6 +480,10 @@ color: white;
             width: 300px;
             height: auto;
             
+        }
+
+        .founder{
+            gap: 24px !important; 
         }
         
     }

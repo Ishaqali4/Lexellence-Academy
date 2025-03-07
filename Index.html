@@ -51,21 +51,23 @@
        
 
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle custom-dropdown-toggle" href="#Program" id="programDropdown">
+                            <a class="nav-link dropdown-toggle custom-dropdown-toggle" href="#program" id="programDropdown">
                                 Programs <span class="caret"></span> 
                             </a>
+                        
+                            <!-- Full dropdown menu (Above 1000px) -->
                             <ul class="dropdown-menu" id="programDropdownMenu">
                                 <li>
-                                     <a href="./Pages/Judiciary.html" class="dropdown-item">
-            <h4>Judiciary Training</h4>
-            <p style="color: #4F4F4F;">
-                Prepare for a distinguished career <br> in the judiciary with expert-led <br> coaching and in-depth legal insights.
-            </p>
-            <span class="read-more">Read More</span>
-        </a> 
+                                    <a href="./Pages/Judiciary.html" class="dropdown-item">
+                                        <h4>Judiciary Training</h4>
+                                        <p style="color: #4F4F4F;">
+                                            Prepare for a distinguished career <br> in the judiciary with expert-led <br> coaching and in-depth legal insights.
+                                        </p>
+                                        <span class="read-more">Read More</span>
+                                    </a> 
                                 </li>
                                 <li>
-                                    <div class="dropdown-item" onclick="window.location.href='corporate-training'">
+                                    <div class="dropdown-item" onclick="window.location.href='./Pages/Corporate.html'">
                                         <h4>Corporate Training</h4>
                                         <p style="color: #4F4F4F;">Master corporate law, contracts, <br> and business regulations to excel <br> in corporate legal practice.</p>
                                         <a href="#" class="read-more">Read More</a>
@@ -74,12 +76,20 @@
                                 <li>
                                     <div class="dropdown-item">
                                         <h4>Litigation Training</h4>
-                                        <p style="color: #4F4F4F;">Develop advocacy skills and <br> courtroom strategies to  become <br> a proficient litigation expert.</p>
+                                        <p style="color: #4F4F4F;">Develop advocacy skills and <br> courtroom strategies to become <br> a proficient litigation expert.</p>
                                         <a href="#" class="read-more">Read More</a>
                                     </div>
                                 </li>
                             </ul>
+                        
+                            <!-- Simple list for mobile (Below 1000px) -->
+                            <ul class="mobile-program-list" id="mobileProgramList">
+                                <li><a href="./Pages/Judiciary.html">Judiciary Training</a></li>
+                                <li><a href="./Pages/Corporate.html">Corporate Training</a></li>
+                                <li><a href="./Pages/Litigation.html">Litigation Training</a></li>
+                            </ul>
                         </li>
+                        
                         
 
 

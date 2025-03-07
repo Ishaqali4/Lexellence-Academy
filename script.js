@@ -1,3 +1,83 @@
+document.addEventListener("DOMContentLoaded", function () {
+    const programDropdown = document.getElementById("programDropdown");
+    const programDropdownMenu = document.getElementById("programDropdownMenu");
+    const overlay = document.createElement("div");
+    
+    overlay.id = "overlay";
+    document.body.appendChild(overlay);
+
+    programDropdown.addEventListener("click", function (event) {
+        event.preventDefault(); // Prevent default anchor behavior
+
+        if (programDropdownMenu.classList.contains("show")) {
+            programDropdownMenu.classList.remove("show");
+            overlay.classList.remove("active");
+        } else {
+            programDropdownMenu.classList.add("show");
+            overlay.classList.add("active");
+        }
+    });
+
+    // Close dropdown when clicking outside
+    overlay.addEventListener("click", function () {
+        programDropdownMenu.classList.remove("show");
+        overlay.classList.remove("active");
+    });
+
+    // Close dropdown on window resize if >1000px
+    window.addEventListener("resize", function () {
+        if (window.innerWidth > 1000) {
+            programDropdownMenu.classList.remove("show");
+            overlay.classList.remove("active");
+        }
+    });
+});
+
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    let programDropdown = document.getElementById("programDropdown");
+    let mobileProgramList = document.getElementById("mobileProgramList");
+
+    programDropdown.addEventListener("click", function (e) {
+        if (window.innerWidth < 1000) {
+            e.preventDefault(); // Prevents default link behavior
+            mobileProgramList.classList.toggle("show"); // Toggle visibility
+        }
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener("click", function (e) {
+        if (!programDropdown.contains(e.target) && !mobileProgramList.contains(e.target)) {
+            mobileProgramList.classList.remove("show");
+        }
+    });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 document.addEventListener("DOMContentLoaded", function () {

@@ -92,7 +92,44 @@ p {
 .dropdown-item {
   width: 268px !important;
   padding: 10px !important;
+  transition: background-color 0.3s ease-in-out;
+
 }
+
+.dropdown-item a{
+display: inline-block;
+text-decoration: none;
+color: #8b4f13;
+margin-top: 10px;
+}
+
+
+.dropdown-item span{
+  text-decoration: none;
+  color: #8b4f13;
+  margin-top: 10px;
+  display: flex !important;
+  }
+
+
+
+.dropdown-item:hover {
+background-color: #FFFDBC !important;
+}
+
+.dropdown-item svg {
+  color: #6d3e0e;
+  margin-left: 8px; /* Default space between text and arrow */
+  transition: transform 0.3s ease-in-out; /* Smooth movement */
+}
+
+.dropdown-item:hover svg {
+  transform: translateX(8px); /* Moves the arrow 5px to the right */
+}
+
+
+
+
 
 /* Hover effect above 1000px */
 @media screen and (min-width: 1000px) {

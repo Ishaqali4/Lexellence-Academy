@@ -4,6 +4,7 @@
     padding: 0;
     position: relative;
     box-sizing: border-box !important; /* Ensure consistent box sizing */
+    font-family: 'Source Sans 3', sans-serif;
     /* font-family: Helvetica, sans-serif !important; */
   }
   
@@ -22,7 +23,9 @@
     margin: 0 !important;
   }
   
-  
+
+  @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+
   
   
   
@@ -104,7 +107,8 @@
       background-size: cover; /* Ensures the image covers the element */
       background-position: center; /* Centers the image */
   
-  
+      background-attachment: fixed; /* Enables parallax effect */
+
     box-sizing: border-box;
     background-repeat: no-repeat;
     background-size: cover;

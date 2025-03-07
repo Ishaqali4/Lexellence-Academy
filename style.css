@@ -3,13 +3,11 @@
   margin: 0;
   padding: 0;
   position: relative;
-  box-sizing: border-box !important; /* Ensure consistent box sizing */
-  /* font-family: Helvetica, sans-serif !important; */
+  box-sizing: border-box !important;
+  font-family: 'Source Sans 3', sans-serif;
 }
 
-
-
-
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
 
 body {
   margin: 0;
@@ -17,42 +15,26 @@ body {
   padding: 0;
 }
 
-/* Basic CSS Reset */
 p {
   margin: 0 !important;
 }
 
 
 
-
-
-/* navbar */
-
-/* Navbar fixed at the top of the header */
+/* Navbar styling */
 .navbar {
   position: fixed !important;
   width: 100vw;
   z-index: 111;
-  background-color: rgba(255, 255, 237, 0.681); /* Slight transparency for effect */
-  backdrop-filter: blur(10px); /* ✅ Adds blur effect */
-  -webkit-backdrop-filter: blur(6px); /* ✅ Safari support */
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+  background-color: rgba(255, 255, 237, 0.681);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(6px);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-
-.navbar-brand img {
-  height: 50px;
-  width: auto;
-}
-
-/* Hide Bootstrap's default toggler */
-.navbar-toggler {
-  display: none !important;
-}
-
-/* Custom Toggle Button */
+/* Custom Navbar Toggle Button */
 .navbar-toggle {
-  display: none; /* Hidden by default */
+  display: none;
   flex-direction: column;
   justify-content: space-around;
   width: 35px;
@@ -63,7 +45,7 @@ p {
   z-index: 1001;
 }
 
-/* Toggle button bars */
+/* Navbar bars */
 .navbar-toggle .bar {
   background-color: black;
   height: 4px;
@@ -72,7 +54,7 @@ p {
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-/* Toggle Button Animation */
+/* Toggle animation */
 .navbar-toggle.active .bar:nth-child(1) {
   transform: rotate(45deg) translateY(10px);
 }
@@ -88,12 +70,91 @@ p {
 /* Show Toggle Button Only Below 1024px */
 @media screen and (max-width: 1024px) {
   .navbar-toggle {
-    display: flex;
+      display: flex;
   }
+}
+
+/* Hover-based dropdown */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  width: 850px;
+  left: 50%;
+  height: auto;
+  transform: translateX(-50%);
+  background: #F6F6F6 !important;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 15px !important;
+  flex-direction: row;
+  justify-content: space-between;
+  border-radius: 16px !important;
+}
+.dropdown-item{
+  width: 268px !important;
+  padding: 10px  !important;
+
+
+}
+
+.dropdown-menu li:hover {
+  cursor: pointer !important;
+  border-radius: 12px;
+  box-shadow: 0px 8px 20px rgba(82, 82, 82, 0.127);
+}
+
+/* Change background on hover */
+.dropdown-menu :hover {
+  background-color: #F5F5DC !important;
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* Change background on click (active state) */
+.dropdown-menu :active {
+  background-color: #E0E0C0 !important; /* Slightly darker shade */
+  transition: background-color 0.2s ease-in-out;
 }
 
 
 
+
+.dropdown-menu:hover{
+  cursor: pointer;
+}
+
+.dropdown-item a {
+  text-decoration: none !important;
+  color: #8b4f13;
+  margin-top: 10px;
+  display: inline-block;  /* ✅ Fix margin issue */
+}
+
+
+
+
+/* Show dropdown on hover */
+.nav-item.dropdown:hover .dropdown-menu {
+  display: flex !important;
+}
+
+/* Fix for mobile - prevent hover dropdown */
+@media (max-width: 991px) {
+  .dropdown-menu {
+      position: static;
+      width: 100%;
+      flex-direction: column;
+      display: none;
+  }
+
+  .nav-item.dropdown:hover .dropdown-menu {
+      display: block !important;
+  }
+}
+
+
+.navbar-brand img{
+  width: auto;
+  height: 50px;
+}
 
 
 /* Header section with background image */
@@ -113,10 +174,6 @@ p {
 }
 
 
-
-
-
-/* General styling */
 .header-content {
   text-align: center;
   padding: 50px 20px; /* Add some padding for better layout */
@@ -134,7 +191,6 @@ p {
   margin-bottom: 40px;
 }  
 
-/* Explore button container */
 .explore {
   display: flex;
   margin-top:40px;
@@ -142,7 +198,6 @@ p {
   gap: 20px; /* Space between the buttons */
 }  
 
-/* Link styles */
 .explore-link {
   padding: 10px 20px;
   border-radius: 4px;
@@ -176,7 +231,8 @@ p {
 /* Responsive Styles */
 @media (max-width: 768px) {
   .header-title {
-    font-size: 24px;
+    font-size: 18px;
+    width: 230px !important;
   }  
   
   .header-subtitle {

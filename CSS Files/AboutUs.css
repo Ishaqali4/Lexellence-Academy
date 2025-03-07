@@ -486,6 +486,15 @@ color: white;
             gap: 24px !important; 
         }
         
+        .Flexible{
+            rotate: 0deg !important;
+        }
+        .Comprehensive{
+            rotate: 0deg !important;
+        }
+        .Expert{
+            rotate: 0deg !important;
+        }
     }
 
 

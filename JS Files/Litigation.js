@@ -1,17 +1,124 @@
+
 document.addEventListener("DOMContentLoaded", function () {
     const navbarToggle = document.querySelector(".navbar-toggle");
-    const navbarCollapse = document.querySelector("#collapsibleNavId");
+    const navbarMenu = document.querySelector("#collapsibleNavId");
+    const dropdownContainer = document.getElementById("programDropdownContainer");
+    const dropdownMenu = document.getElementById("programDropdownMenu");
 
+    // Toggle navbar menu
     navbarToggle.addEventListener("click", function () {
-        // Toggle 'active' class for animation
         this.classList.toggle("active");
+        navbarMenu.classList.toggle("show");
     });
 
-    // Reset toggle icon when menu closes
-    navbarCollapse.addEventListener("hidden.bs.collapse", function () {
-        navbarToggle.classList.remove("active");
+    // Close navbar when clicking outside
+    document.addEventListener("click", function (event) {
+        if (!navbarMenu.contains(event.target) && !navbarToggle.contains(event.target)) {
+            navbarMenu.classList.remove("show");
+            navbarToggle.classList.remove("active");
+        }
+    });
+
+    // Hover dropdown behavior for large screens
+    dropdownContainer.addEventListener("mouseenter", function () {
+        if (window.innerWidth > 991) {
+            dropdownMenu.style.display = "flex";
+        }
+    });
+
+    dropdownContainer.addEventListener("mouseleave", function () {
+        if (window.innerWidth > 991) {
+            setTimeout(function () {
+                if (!dropdownMenu.matches(":hover")) {
+                    dropdownMenu.style.display = "none";
+                }
+            }, 200);
+        }
+    });
+
+    // Remove hover dropdown for mobile (click-based only)
+    if (window.innerWidth <= 991) {
+        dropdownContainer.removeEventListener("mouseenter", () => {});
+        dropdownContainer.removeEventListener("mouseleave", () => {});
+    }
+});
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const programDropdown = document.getElementById("programDropdown");
+    const programDropdownMenu = document.getElementById("programDropdownMenu");
+    const overlay = document.createElement("div");
+    
+    overlay.id = "overlay";
+    document.body.appendChild(overlay);
+
+    programDropdown.addEventListener("click", function (event) {
+        event.preventDefault(); // Prevent default anchor behavior
+
+        if (programDropdownMenu.classList.contains("show")) {
+            programDropdownMenu.classList.remove("show");
+            overlay.classList.remove("active");
+        } else {
+            programDropdownMenu.classList.add("show");
+            overlay.classList.add("active");
+        }
+    });
+
+    // Close dropdown when clicking outside
+    overlay.addEventListener("click", function () {
+        programDropdownMenu.classList.remove("show");
+        overlay.classList.remove("active");
+    });
+
+    // Close dropdown on window resize if >1000px
+    window.addEventListener("resize", function () {
+        if (window.innerWidth > 1000) {
+            programDropdownMenu.classList.remove("show");
+            overlay.classList.remove("active");
+        }
     });
 });
+
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    let programDropdown = document.getElementById("programDropdown");
+    let mobileProgramList = document.getElementById("mobileProgramList");
+
+    programDropdown.addEventListener("click", function (e) {
+        if (window.innerWidth < 1000) {
+            e.preventDefault(); // Prevents default link behavior
+            mobileProgramList.classList.toggle("show"); // Toggle visibility
+        }
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener("click", function (e) {
+        if (!programDropdown.contains(e.target) && !mobileProgramList.contains(e.target)) {
+            mobileProgramList.classList.remove("show");
+        }
+    });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 document.addEventListener("DOMContentLoaded", function () {

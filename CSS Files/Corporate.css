@@ -29,74 +29,214 @@
   
   
   
-  /* navbar */
-  
-  /* Navbar fixed at the top of the header */
-  .navbar {
-    position: fixed !important;
-    width: 100vw;
-    z-index: 111;
-    background-color: rgba(249, 249, 237, 0.9); /* Slight transparency for effect */
-    backdrop-filter: blur(10px); /* ✅ Adds blur effect */
-    -webkit-backdrop-filter: blur(10px); /* ✅ Safari support */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
-  }
-  
-  
-  .navbar-brand img {
-    height: 50px;
-    width: auto;
-  }
-  
-  /* Hide Bootstrap's default toggler */
-  .navbar-toggler {
-    display: none !important;
-  }
-  
-  /* Custom Toggle Button */
+/* Navbar styling */
+.navbar {
+  position: fixed !important;
+  width: 100vw;
+  z-index: 111;
+  background-color: rgba(245, 245, 231, 0.709);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Custom Navbar Toggle Button */
+.navbar-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 35px;
+  height: 28px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+/* Navbar bars */
+.navbar-toggle .bar {
+  background-color: black;
+  height: 4px;
+  width: 100%;
+  border-radius: 5px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Toggle animation */
+.navbar-toggle.active .bar:nth-child(1) {
+  transform: rotate(45deg) translateY(10px);
+}
+
+.navbar-toggle.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.navbar-toggle.active .bar:nth-child(3) {
+  transform: rotate(-45deg) translateY(-10px);
+}
+
+/* Show Toggle Button Only Below 1024px */
+@media screen and (max-width: 1024px) {
   .navbar-toggle {
-    display: none; /* Hidden by default */
-    flex-direction: column;
-    justify-content: space-around;
-    width: 35px;
-    height: 28px;
-    border: none;
-    background: none;
-    cursor: pointer;
-    z-index: 1001;
-  }
-  
-  /* Toggle button bars */
-  .navbar-toggle .bar {
-    background-color: black;
-    height: 4px;
-    width: 100%;
-    border-radius: 5px;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-  }
-  
-  /* Toggle Button Animation */
-  .navbar-toggle.active .bar:nth-child(1) {
-    transform: rotate(45deg) translateY(10px);
-  }
-  
-  .navbar-toggle.active .bar:nth-child(2) {
-    opacity: 0;
-  }
-  
-  .navbar-toggle.active .bar:nth-child(3) {
-    transform: rotate(-45deg) translateY(-10px);
-  }
-  
-  /* Show Toggle Button Only Below 1024px */
-  @media screen and (max-width: 1024px) {
-    .navbar-toggle {
       display: flex;
-    }
   }
-  
-  
-  
+}
+
+/* Dropdown styling */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  width: 850px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #F6F6F6 !important;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 15px !important;
+  flex-direction: row;
+  justify-content: space-between;
+  border-radius: 16px !important;
+}
+
+.dropdown-item {
+  width: 268px !important;
+  padding: 10px !important;
+  transition: background-color 0.3s ease-in-out;
+
+}
+
+.dropdown-item a{
+display: inline-block;
+text-decoration: none;
+color: #8b4f13;
+margin-top: 10px;
+}
+
+
+.dropdown-item span{
+  text-decoration: none;
+  color: #8b4f13;
+  margin-top: 10px;
+  display: flex !important;
+  }
+
+
+
+.dropdown-item:hover {
+background-color: #FFFDBC !important;
+}
+
+.dropdown-item svg {
+  color: #6d3e0e;
+  margin-left: 8px; /* Default space between text and arrow */
+  transition: transform 0.3s ease-in-out; /* Smooth movement */
+}
+
+.dropdown-item:hover svg {
+  transform: translateX(8px); /* Moves the arrow 5px to the right */
+}
+
+
+
+
+
+/* Hover effect above 1000px */
+@media screen and (min-width: 1000px) {
+  .nav-item.dropdown:hover .dropdown-menu {
+      display: flex !important;
+  }
+}
+
+/* Mobile dropdown list (Hidden by default) */
+.mobile-program-list {
+  display: none;
+  list-style: none;
+  position: absolute;
+  width: 100%;
+  left: 98px !important;
+  top: -16px  !important;
+  z-index: 9999; /* Ensure it appears above other elements */
+  background-color: rgba(245, 245, 231, 0.93);
+  backdrop-filter: blur(22px);
+  width: 240px;
+border-radius: 18px;
+}
+
+
+
+.mobile-program-list li {
+  text-align: center;
+}
+
+.mobile-program-list a {
+  padding: 2px 30px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  display: block;
+  background-color: #FFFDBC;
+  margin: 10px;
+  width: 200px;
+  right: 20px;
+  border-radius: 6px;
+}
+
+.mobile-program-list a:hover {
+  color: #333;
+  background-color: #FFF67C;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+
+}
+
+
+
+
+
+
+
+
+/* Show mobile dropdown on click */
+.mobile-program-list.show {
+  display: block !important;
+}
+
+/* Hide full dropdown below 1000px */
+@media screen and (max-width: 999px) {
+  #programDropdownMenu {
+      display: none !important;
+  }
+
+  .mobile-program-list {
+      display: none;
+  }
+}
+
+
+
+/* Show mobile dropdown on click */
+.mobile-program-list.show {
+  display: block !important;
+}
+
+
+
+
+
+
+.dropdown-menu li:hover {
+  cursor: pointer !important;
+  border-radius: 12px;
+  box-shadow: 0px 8px 20px rgba(82, 82, 82, 0.127);
+}
+
+.navbar-brand img{
+  width: auto;
+  height: 50px;
+}
+
+.dropdown-menu:hover{
+  cursor: pointer;
+}
+
   
   
   /* Header section with background image */
@@ -619,6 +759,118 @@ gap: 24px;
 overflow-x: hidden;
 
 margin: 0% !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Ensure image scales properly */
+.SubscribeContent1 .image img {
+  width: 100%; /* Full width on smaller screens */
+  height: auto; /* Maintain aspect ratio */
+  max-width: 540px; /* Limit max size on larger screens */
+  display: block;
+  margin: 0 auto; /* Center align on small screens */
+}
+
+/* Layout adjustments */
+.SubscribeContent1 {
+  padding: 20px;
+}
+
+
+/* Subscribe input & button */
+.subscribe-container {
+  display: flex;
+  flex-wrap: wrap; /* Stack input & button on smaller screens */
+  gap: 10px;
+  justify-content: center;
+}
+
+.subscribe-input {
+  width: 70%;
+  max-width: 300px !important;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.subscribe-button {
+  padding: 10px 15px;
+  border: none;
+  background-color: #964B00;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+ 
+  .SubscribeContent2{
+    display: block;
+  }
+  
+
+}
+
+
+
+.SubscribeContent2{
+  display: block;
+  justify-content: start;
+}
+
+
+
+
+
+
+.subscribe-container {
+  margin-top: 20px;
+            display: flex;
+            align-items: center;
+            width: fit-content;
+            background-color: #faf7dc; /* Light yellow background */
+            padding: 5px;
+            border-radius: 25px;
+        }
+
+        .subscribe-input {
+            border: none;
+            outline: none;
+            background: transparent;
+            padding: 10px;
+            width: 280px  !important;
+            font-size: 16px;
+            border-radius: 25px;
+        }
+
+        .subscribe-button {
+            background-color: #8b4f13; /* Brown color */
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .subscribe-button:hover {
+            background-color: #6d3e0e;
+        }
+
+.subscribe{
+  display: flex !important;
+  justify-content: center;
+  background-color: #F6F6F6 !important;
 }
 
 

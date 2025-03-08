@@ -1,4 +1,49 @@
 document.addEventListener("DOMContentLoaded", function () {
+    const navbarToggle = document.querySelector(".navbar-toggle");
+    const navbarMenu = document.querySelector("#collapsibleNavId");
+    const dropdownContainer = document.getElementById("programDropdownContainer");
+    const dropdownMenu = document.getElementById("programDropdownMenu");
+
+    // Toggle navbar menu
+    navbarToggle.addEventListener("click", function () {
+        this.classList.toggle("active");
+        navbarMenu.classList.toggle("show");
+    });
+
+    // Close navbar when clicking outside
+    document.addEventListener("click", function (event) {
+        if (!navbarMenu.contains(event.target) && !navbarToggle.contains(event.target)) {
+            navbarMenu.classList.remove("show");
+            navbarToggle.classList.remove("active");
+        }
+    });
+
+    // Hover dropdown behavior for large screens
+    dropdownContainer.addEventListener("mouseenter", function () {
+        if (window.innerWidth > 991) {
+            dropdownMenu.style.display = "flex";
+        }
+    });
+
+    dropdownContainer.addEventListener("mouseleave", function () {
+        if (window.innerWidth > 991) {
+            setTimeout(function () {
+                if (!dropdownMenu.matches(":hover")) {
+                    dropdownMenu.style.display = "none";
+                }
+            }, 200);
+        }
+    });
+
+    // Remove hover dropdown for mobile (click-based only)
+    if (window.innerWidth <= 991) {
+        dropdownContainer.removeEventListener("mouseenter", () => {});
+        dropdownContainer.removeEventListener("mouseleave", () => {});
+    }
+});
+
+
+document.addEventListener("DOMContentLoaded", function () {
     const programDropdown = document.getElementById("programDropdown");
     const programDropdownMenu = document.getElementById("programDropdownMenu");
     const overlay = document.createElement("div");

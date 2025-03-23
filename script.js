@@ -239,7 +239,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-
 // Wait for the DOM to load
 document.addEventListener('DOMContentLoaded', function () {
     const carousel = document.getElementById('carouselId');
@@ -252,12 +251,23 @@ document.addEventListener('DOMContentLoaded', function () {
     // Get Bootstrap carousel instance
     const carouselInstance = new bootstrap.Carousel(carousel, {
         interval: interval,
-        ride: 'carousel'
+        ride: 'carousel',
+        wrap: true // Ensure smooth looping
     });
+
+    // Function to reset progress dots
+    function resetProgressDots() {
+        completedSlides.clear();
+        dots.forEach(dot => {
+            dot.classList.remove('completed', 'active');
+        });
+        dots[0].classList.add('active');
+    }
 
     // Update dots on slide change
     carousel.addEventListener('slid.bs.carousel', function (event) {
-        const activeIndex = Array.from(carousel.querySelectorAll('.carousel-item')).indexOf(event.relatedTarget);
+        const items = carousel.querySelectorAll('.carousel-item');
+        const activeIndex = Array.from(items).indexOf(event.relatedTarget);
         
         // Remove active class from all dots
         dots.forEach(dot => dot.classList.remove('active'));
@@ -272,9 +282,8 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         // If looping back to the first slide, reset completed slides
-        if (activeIndex === 0 && completedSlides.size === dots.length - 1) {
-            completedSlides.clear();
-            dots.forEach(dot => dot.classList.remove('completed'));
+        if (activeIndex === 0) {
+            resetProgressDots();
         }
     });
 
@@ -282,16 +291,20 @@ document.addEventListener('DOMContentLoaded', function () {
     dots.forEach((dot, index) => {
         dot.addEventListener('click', () => {
             carouselInstance.to(index); // Navigate to selected slide
-
-            // Mark all previous slides as completed
-            completedSlides.clear();
-            for (let i = 0; i < index; i++) {
-                completedSlides.add(i);
-                dots[i].classList.add('completed');
-            }
+            
+            // Allow animation transition
+            setTimeout(() => {
+                completedSlides.clear();
+                for (let i = 0; i < index; i++) {
+                    completedSlides.add(i);
+                    dots[i].classList.add('completed');
+                }
+            }, 500); // Delay ensures smooth animation transition
         });
     });
 
-    // Initialize first dot as active
-    dots[0].classList.add('active');
+    // Ensure first dot is marked active on page load
+    setTimeout(() => {
+        dots[0].classList.add('active');
+    }, 100);
 });

@@ -790,10 +790,13 @@ padding-right: 20px;
       }
 
 
+      
 
-
-
-
+      .carousel-control-prev-icon,
+      .carousel-control-next-icon {
+          filter: invert(27%) sepia(63%) saturate(500%) hue-rotate(10deg) brightness(80%) contrast(90%);
+      }
+      
 
 
 

@@ -386,24 +386,19 @@ border-radius: 18px;
 
 
 
-/* The custom cursor */
+/* Custom Cursor - Applies Globally */
 .cursor {
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  background-color: #3498db;
+  position: fixed; /* Change from absolute to fixed */
+  width: 28px;
+  height: 28px;
+  background-color: #db983433;
+  backdrop-filter: blur(2px);
   border-radius: 50%;
   pointer-events: none;
   transform: translate(-50%, -50%);
   transition: transform 0.1s ease, background-color 0.2s ease;
+  z-index: 9999; /* Ensure it stays above everything */
 }
-
-/* Example hover effect for any element */
-.content:hover .cursor {
-  background-color: #e74c3c;
-  transform: translate(-50%, -50%) scale(1.5);
-}
-
 
 
 
@@ -672,6 +667,51 @@ padding-right: 20px;
 
 
 
+/* Progress Dots Styling */
+.progress-dots {
+  display: flex;
+  gap: 8px;
+}
+
+.progress-dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #ddd;
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
+  position: relative;
+  overflow: hidden;
+  cursor: pointer; /* Add pointer cursor to indicate interactivity */
+}
+
+.progress-dot.active {
+  background-color: #B36000;
+}
+
+.progress-dot.completed {
+  background-color:#FFFDBC; /* Light color for completed state */
+}
+
+.progress-dot.active::before {
+  content: '';
+  display: block;
+  height: 100%;
+  width: 0%;
+  background-color: rgba(255, 255, 255, 0.3); /* Light overlay for progress */
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: progress 2s linear; /* Animation for active dot */
+}
+
+@keyframes progress {
+  from {
+      width: 0%;
+  }
+  to {
+      width: 100%;
+  }
+}
 
 
 
@@ -706,7 +746,7 @@ padding-right: 20px;
 }
 
 .subscribe-input {
-  width: 70%;
+  width: 60%;
   max-width: 300px;
   padding: 10px;
   border: 1px solid #ccc;
@@ -727,9 +767,43 @@ padding-right: 20px;
   .SubscribeContent2{
     display: block;
   }
-  
+
+
 
 }
+
+
+        /* Responsive Design */
+        @media (max-width: 500px) {
+          .subscribe-container {
+              flex-direction: column;
+              gap: 5px;
+          }
+
+          .subscribe-input {
+              text-align: center;
+          }
+
+          .subscribe-button {
+              width: 100%;
+          }
+      }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

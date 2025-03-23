@@ -144,42 +144,62 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-// Create the custom cursor element
-const cursor = document.createElement('div');
-cursor.classList.add('cursor');
-document.body.appendChild(cursor);
 
-// Variables for tracking mouse position and smoothing
-let mouseX = 0;
-let mouseY = 0;
-let cursorX = 0;
-let cursorY = 0;
 
-// Listen for mouse movement
-document.addEventListener('mousemove', (e) => {
-  mouseX = e.clientX;
-  mouseY = e.clientY;
+
+
+
+
+
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    // Create the custom cursor element
+    const cursor = document.createElement('div');
+    cursor.classList.add('cursor');
+    document.body.appendChild(cursor);
+
+    // Variables for tracking mouse position and smoothing
+    let mouseX = 0, mouseY = 0;
+    let cursorX = 0, cursorY = 0;
+
+    // Listen for mouse movement globally
+    document.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+    });
+
+    // Smooth cursor movement
+    function moveCursor() {
+        const distX = mouseX - cursorX;
+        const distY = mouseY - cursorY;
+
+        cursorX += distX / 10;
+        cursorY += distY / 10;
+
+        // Set cursor position
+        cursor.style.left = `${cursorX}px`;
+        cursor.style.top = `${cursorY}px`;
+
+        requestAnimationFrame(moveCursor);
+    }
+
+    // Start the animation
+    moveCursor();
 });
 
-// Smooth the cursor's movement with a small delay
-function moveCursor() {
-  const distX = mouseX - cursorX;
-  const distY = mouseY - cursorY;
 
-  // Apply some smoothing to the cursor movement
-  cursorX += distX / 10;
-  cursorY += distY / 10;
 
-  // Set cursor position
-  cursor.style.left = `${cursorX}px`;
-  cursor.style.top = `${cursorY}px`;
 
-  // Request the next animation frame for smooth movement
-  requestAnimationFrame(moveCursor);
-}
 
-// Start the cursor movement
-moveCursor();
+
+
+
+
+
 
 
 
@@ -202,4 +222,76 @@ document.addEventListener("DOMContentLoaded", function () {
     );
 
     observer.observe(programSections);
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Wait for the DOM to load
+document.addEventListener('DOMContentLoaded', function () {
+    const carousel = document.getElementById('carouselId');
+    const dots = document.querySelectorAll('.progress-dot');
+    const interval = 2000; // Interval time in milliseconds
+    let completedSlides = new Set(); // Track completed slides using a Set
+
+    if (!carousel || dots.length === 0) return; // Ensure elements exist
+
+    // Get Bootstrap carousel instance
+    const carouselInstance = new bootstrap.Carousel(carousel, {
+        interval: interval,
+        ride: 'carousel'
+    });
+
+    // Update dots on slide change
+    carousel.addEventListener('slid.bs.carousel', function (event) {
+        const activeIndex = Array.from(carousel.querySelectorAll('.carousel-item')).indexOf(event.relatedTarget);
+        
+        // Remove active class from all dots
+        dots.forEach(dot => dot.classList.remove('active'));
+        
+        // Add active class to the current dot
+        dots[activeIndex].classList.add('active');
+        
+        // Mark previous slides as completed
+        for (let i = 0; i < activeIndex; i++) {
+            completedSlides.add(i);
+            dots[i].classList.add('completed');
+        }
+
+        // If looping back to the first slide, reset completed slides
+        if (activeIndex === 0 && completedSlides.size === dots.length - 1) {
+            completedSlides.clear();
+            dots.forEach(dot => dot.classList.remove('completed'));
+        }
+    });
+
+    // Add click event listeners to dots
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            carouselInstance.to(index); // Navigate to selected slide
+
+            // Mark all previous slides as completed
+            completedSlides.clear();
+            for (let i = 0; i < index; i++) {
+                completedSlides.add(i);
+                dots[i].classList.add('completed');
+            }
+        });
+    });
+
+    // Initialize first dot as active
+    dots[0].classList.add('active');
 });

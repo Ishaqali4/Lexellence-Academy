@@ -127,7 +127,9 @@ background-color: #FFFDBC !important;
   transform: translateX(8px); /* Moves the arrow 5px to the right */
 }
 
-
+.dropdown-menu p{
+  font-size: 14px;
+}
 
 
 

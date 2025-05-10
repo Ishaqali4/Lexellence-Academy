@@ -549,6 +549,7 @@ border-radius: 18px;
     display: flex;
     justify-content: center !important;
 gap: 32px;
+overflow-x: hidden;
 }
 
 
@@ -590,13 +591,7 @@ gap: 32px;
 }
 
 
-.CourtroomSkills {
-  display: flex;
-  justify-content: center;
-  gap: 24px;
-  flex-wrap: wrap;
-  position: relative;
-}
+
 
 /* Base styles for skill items */
 .CourtroomSkillsContent1,
@@ -632,6 +627,7 @@ gap: 32px;
   display: flex;
   justify-content: center;
   gap: 24px;
+  overflow-x: hidden;
   flex-wrap: wrap;
   position: relative;
 }

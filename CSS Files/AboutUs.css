@@ -234,6 +234,49 @@
   .dropdown-menu:hover{
     cursor: pointer;
   }
+
+
+
+
+
+  .contact-btn {
+    color: white;
+    background-color: #964B00;
+    border-radius: 8px;
+    padding: 10px 18px;
+    width: 118px;
+    text-align: center;
+margin-left: 18px;
+    transition: all 0.3s ease; /* smooth animation */
+  }
+  
+  .contact-btn:hover {
+    color: white !important;
+    background-color: #7a3e00; /* slightly darker brown */
+    transform: scale(1.05);    /* subtle zoom */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     
   
  
